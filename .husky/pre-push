@@ -1,20 +1,10 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#!/usr/bin/env sh
+set -e
 
 echo "Running TypeScript build check..."
 npx tsc --noEmit
 
-if [ $? -ne 0 ]; then
-  echo "Build check failed. Please fix the errors before pushing."
-  exit 1
-fi
-
 echo "Running Vite production build check..."
 npm run build
-
-if [ $? -ne 0 ]; then
-  echo "Vite build failed. Please fix the errors before pushing."
-  exit 1
-fi
 
 echo "Build check passed. Ready to push."
