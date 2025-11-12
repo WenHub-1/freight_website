@@ -4,6 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-background-primary: var(--background-primary);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+  --color-text-state-grey: var(--text-state-grey);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-grey2: var(--text-grey2);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -42,9 +48,15 @@
 }
 
 :root {
+  --background-primary: #0a293b;
+  --background-secondary: #98c739;
+  --background-tertiary: #f2f2f2;
+  --text-state-grey: #6b6b6b;
+  --text-grey2: #848484;
+  --text-secondary: #98c739;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
+  --foreground: #0a293b;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
