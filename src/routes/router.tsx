@@ -6,6 +6,7 @@ import MainLayout from "../components/layouts/main-layout";
 
 const Dashboard = lazy(() => import("../pages/dashboard"));
 const Login = lazy(() => import("../pages/login"));
+const Theme = lazy(() => import("../pages/theme"));
 
 const appRoutes = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const appRoutes = createBrowserRouter([
         path: APP_ROUTES.home,
         index: true,
         element: <Dashboard />,
+      },
+      {
+        path: APP_ROUTES.theme,
+        element: <Theme />,
       },
     ],
   },

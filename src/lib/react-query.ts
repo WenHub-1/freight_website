@@ -1,4 +1,4 @@
-import { toast } from 'sonner';
+import { toast } from "sonner";
 import { MutationCache, QueryCache, QueryClient } from "@tanstack/react-query";
 import { AxiosError } from "axios";
 
@@ -14,8 +14,8 @@ export const queryClient = new QueryClient({
     onError: (err) => {
       console.log("Query error", err);
       if (err instanceof AxiosError) {
-        toast.error(err.response?.data?.message || 'Something went wrong', {
-          description: 'An error occurred while fetching data.',
+        toast.error(err.response?.data?.message || "Something went wrong", {
+          description: "An error occurred while fetching data.",
         });
       }
     },
@@ -24,8 +24,8 @@ export const queryClient = new QueryClient({
     onError: (err) => {
       console.log("Mutation error", err);
       if (err instanceof AxiosError) {
-        toast.error(err.response?.data?.message || 'Something went wrong', {
-          description: 'An error occurred while fetching data.',
+        toast.error(err.response?.data?.message || "Something went wrong", {
+          description: "An error occurred while fetching data.",
         });
       }
     },

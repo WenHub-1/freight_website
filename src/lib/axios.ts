@@ -1,4 +1,7 @@
-import Axios, { type InternalAxiosRequestConfig, type AxiosResponse } from "axios";
+import Axios, {
+  type InternalAxiosRequestConfig,
+  type AxiosResponse,
+} from "axios";
 import { queryClient } from "./react-query.ts";
 import { API_URL } from "./constants";
 
