@@ -11,16 +11,14 @@ import {
 import { Button } from "../ui/button";
 import { Globe, ChevronDown } from "lucide-react";
 import Qadamlogo from "../../assets/images/Qdamlogo.png";
-
+interface HeaderButtons {
+  language: {
+    english: string;
+    arabic: string;
+  };
+  download: string;
+}
 const Header: React.FC = () => {
-  interface HeaderButtons {
-    language: {
-      english: string;
-      arabic: string;
-    };
-    download: string;
-  }
-
   const { t, i18n } = useTranslation();
   const navItems = t("header.nav", { returnObjects: true }) as NavItem[];
   const buttons = t("header.buttons", { returnObjects: true }) as HeaderButtons;
