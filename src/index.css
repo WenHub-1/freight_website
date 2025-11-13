@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/src/assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -44,6 +64,7 @@
 :root {
   --font-inter: "Inter", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
   --radius: 0.625rem;
   --background: #fdfdfd;
   --foreground: oklch(0.141 0.005 285.823);
@@ -118,5 +139,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
   }
 }

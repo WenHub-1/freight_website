@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "../ui/Container";
-import type { NavItem, HeaderButtons } from "../../types/interface";
+import type { NavItem } from "../../types/interface";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,11 +9,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
-import ArrowDown from "@/assets/svg/arrowdown";
-import EarthSign from "@/assets/svg/eathsign";
+import { Globe, ChevronDown } from "lucide-react";
 import Qadamlogo from "../../assets/images/Qdamlogo.png";
 
 const Header: React.FC = () => {
+  interface HeaderButtons {
+    language: {
+      english: string;
+      arabic: string;
+    };
+    download: string;
+  }
+
   const { t, i18n } = useTranslation();
   const navItems = t("header.nav", { returnObjects: true }) as NavItem[];
   const buttons = t("header.buttons", { returnObjects: true }) as HeaderButtons;
@@ -29,15 +36,15 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="p-4 font-poppins ticky top-0 z-5 font-[Poppins] font-medium  text-white h-[90px] w-full justify-center bg-secondary ">
+    <header className="p-4 ticky top-0 z-5   text-white h-[90px] w-full justify-center bg-secondary ">
       <Container className="flex  justify-between">
         {/* Left: Logo + Nav */}
-        <div className="flex gap-16 text-[16px] items-center space-x-4">
+        <div className="flex gap-16 text- items-center space-x-4">
           <div className="">
             <img src={Qadamlogo} alt="" />
           </div>
 
-          <ul className="flex gap-7 text-[16px] items-center">
+          <ul className="flex gap-7 text-base items-center">
             {navItems.map((item, index) => (
               <div key={index} className="relative">
                 {item.label === "Company" ? (
@@ -48,7 +55,7 @@ const Header: React.FC = () => {
                         variant="outline"
                       >
                         {item.label}
-                        <ArrowDown />
+                        <ChevronDown />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56" align="start">
@@ -69,17 +76,16 @@ const Header: React.FC = () => {
           </ul>
         </div>
 
-        {/* Right: Language dropdown + Download button */}
         <div className="flex   gap-4 items-center space-x-4">
-          {/* Language dropdown using Shadcn */}
+          {/* Language drop down */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
-                className="bg-transparent border-0 text-[16px]"
+                className="bg-transparent border-0 flex items-center gap-2 text-base"
               >
-                <EarthSign />
-                {displayLanguageLabel} <ArrowDown />
+                <Globe size={18} />
+                {displayLanguageLabel} <ChevronDown />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-40" align="end">
@@ -97,7 +103,7 @@ const Header: React.FC = () => {
           </DropdownMenu>
 
           {/* Download button */}
-          <Button variant="default" className="text-[16px] h-12 w-[173px]">
+          <Button variant="default" className="text-base h-12 w-44">
             {buttons.download}
           </Button>
         </div>
