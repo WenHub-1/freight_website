@@ -1,0 +1,24 @@
+{
+  "header": {
+    "nav": [
+      { "label": "Ship with Us" },
+      { "label": "Become a Driver" },
+      { "label": "Partner" },
+      {
+        "label": "Company",
+        "dropdown": [
+          { "label": "About Us" },
+          { "label": "Careers" },
+          { "label": "Contact" }
+        ]
+      }
+    ],
+    "buttons": {
+      "language": {
+        "english": "English",
+        "arabic": "العربية"
+      },
+      "download": "Download App"
+    }
+  }
+}

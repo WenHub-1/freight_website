@@ -1,0 +1,24 @@
+{
+  "header": {
+    "nav": [
+      { "label": "اشحن معنا" },
+      { "label": "كن سائقًا" },
+      { "label": "شريك" },
+      {
+        "label": "الشركة",
+        "dropdown": [
+          { "label": "من نحن" },
+          { "label": "وظائف" },
+          { "label": "اتصل بنا" }
+        ]
+      }
+    ],
+    "buttons": {
+      "language": {
+        "english": "English",
+        "arabic": "العربية"
+      },
+      "download": "تحميل التطبيق"
+    }
+  }
+}
