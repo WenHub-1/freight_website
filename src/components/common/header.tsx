@@ -39,7 +39,7 @@ const Header: React.FC = () => {
     <header className="p-4 ticky top-0 z-5   text-white h-[90px] w-full justify-center bg-secondary ">
       <Container className="flex  justify-between">
         {/* Left: Logo + Nav */}
-        <div className="flex gap-16 text- items-center space-x-4">
+        <div className="flex gap-16  items-center space-x-4">
           <div className="">
             <img src={Qadamlogo} alt="" />
           </div>
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                   </DropdownMenu>
                 ) : (
                   <li className="inline-block mx-4 cursor-pointer">
-                    <a href={item.link}>{item.label}</a>
+                    <a>{item.label}</a>
                   </li>
                 )}
               </div>
