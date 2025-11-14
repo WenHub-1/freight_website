@@ -11,7 +11,7 @@ import {
 import { Button } from "../ui/button";
 import { Globe, ChevronDown } from "lucide-react";
 import Qadamlogo from "../../assets/images/Qdamlogo.png";
-interface HeaderButtons {
+interface IHeaderButtons {
   language: {
     english: string;
     arabic: string;
@@ -21,7 +21,9 @@ interface HeaderButtons {
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
   const navItems = t("header.nav", { returnObjects: true }) as NavItem[];
-  const buttons = t("header.buttons", { returnObjects: true }) as HeaderButtons;
+  const buttons = t("header.buttons", {
+    returnObjects: true,
+  }) as IHeaderButtons;
 
   const currentLanguage = i18n.language;
   const languageLabels = buttons.language;
@@ -34,7 +36,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="p-4 ticky top-0 z-5   text-white h-[90px] w-full justify-center bg-secondary ">
+    <header className="p-4 sticky top-0 z-50 text-white h-[90px] w-full justify-center bg-secondary ">
       <Container className="flex  justify-between">
         {/* Left: Logo + Nav */}
         <div className="flex gap-16  items-center space-x-4">

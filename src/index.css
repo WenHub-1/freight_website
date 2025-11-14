@@ -1,21 +1,35 @@
 @font-face {
   font-family: "Poppins";
-  src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Poppins.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("/src/assets/fonts/Poppins-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: "Roboto";
-  src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Roboto.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DM-Sans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.dm-sans-font {
+  font-family: "DM Sans", sans-serif;
+}
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+}
+.inter-font {
+  font-family: "Inter", sans-serif;
 }
 
 @import "tailwindcss";
@@ -74,7 +88,7 @@
   --primary: #98c739;
   --primary-foreground: #ffffff;
   --secondary: #0a293b;
-  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --secondary-foreground: #f2f2f2;
   --muted: #6b6b6b;
   --muted-foreground: #848484;
   --accent: oklch(0.967 0.001 286.375);

@@ -20,5 +20,107 @@
       },
       "download": "Download App"
     }
+  },
+  "footer": {
+    "description": "Qdam is Empowering businesses and drivers with seamless delivery solutions.",
+    "service": {
+      "title": "SERVICE",
+      "items": ["Ship with us", "Become a driver", "Partner & earn"]
+    },
+    "company": {
+      "title": "Company",
+      "items": ["About Us", "Careers", " Contact us"]
+    },
+    "legal": {
+      "title": "Legal",
+      "items": ["Privacy Policy", "Terms & Conditions", "Cookie Policy"]
+    }
+  },
+  "dashboard": {
+    "hero": {
+      "title": "Trucking Made Simple",
+      "subtitle": "Your on-demand delivery platform for every shipment.",
+      "buttonText": "Download the app"
+    },
+    "benefitsSection": {
+      "title": "One Platform, Endless Possibilities",
+      "items": [
+        {
+          "title": "Ship with us",
+          "subtitle": "With Qdam, pickup and drop off, hassle-free!"
+        },
+        {
+          "title": "Become a driver",
+          "subtitle": "Enjoy flexible hours, choose your rates, and drive your way to extra income."
+        },
+        {
+          "title": "Partner & earn",
+          "subtitle": "Onboard drivers. Earn commissions. Grow your income."
+        }
+      ]
+    },
+    "featureSection": {
+      "title": "Quick. Easy. Affordable.",
+      "items": [
+        {
+          "title": "Affordable",
+          "subtitle": "Easy negotiation between shipper and the driver to get the right price"
+        },
+        {
+          "title": "Order matching",
+          "subtitle": "Choose from various vehicles for your delivery needs."
+        },
+        {
+          "title": "Verified Drivers",
+          "subtitle": "Every driver is verified to ensure reliable and professional service."
+        },
+        {
+          "title": "Real-time tracking",
+          "subtitle": "Real-time tracking for your bookings."
+        }
+      ]
+    },
+    "vehicleSection": {
+      "title": "Choose the right vehicle for your delivery"
+    },
+    "appDownloadBanner": {
+      "buttonText": "Download app",
+      "title": "Get the app on iPhone or Android — from parcels to truckloads."
+    },
+    "faqSection": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is Qdam?",
+          "answer": [
+            "Our flagship product combines cutting-edge technology with sleek design. Built with premium materials, it offers unparalleled performance and reliability."
+          ]
+        },
+        {
+          "question": "How does it work?",
+          "answer": [
+            "We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days."
+          ]
+        },
+        {
+          "question": "Frequently asked any question?",
+          "answer": [
+            "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition."
+          ]
+        },
+        {
+          "question": "Payment Options",
+          "answer": ["We accept all major credit cards, PayPal, and Apple Pay."]
+        },
+        {
+          "question": "Warranty",
+          "answer": ["Products come with a 1-year limited warranty."]
+        },
+        {
+          "question": "Support",
+          "answer": ["Our support team is available 24/7."]
+        }
+      ]
+    }
   }
 }
