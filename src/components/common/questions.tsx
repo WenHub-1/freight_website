@@ -3,6 +3,7 @@ import Container from "../ui/Container";
 import { Plus, Minus } from "lucide-react";
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
@@ -22,17 +23,12 @@ interface FaqSection {
 const Questions: React.FC = () => {
   const { t } = useTranslation();
 
-  // Type the translation result
   const faqData = t("dashboard.faqSection", {
     returnObjects: true,
   }) as FaqSection;
-  const faqs: FaqItem[] = faqData.items;
+  const faqs: FaqItem[] = faqData?.items ?? [];
 
-  const [openItem, setOpenItem] = useState<string | null>(null);
-
-  const handleToggle = (itemValue: string) => {
-    setOpenItem((prev) => (prev === itemValue ? null : itemValue));
-  };
+  const [openItem, setOpenItem] = useState<string>("");
 
   return (
     <Container>
@@ -44,7 +40,9 @@ const Questions: React.FC = () => {
         <Accordion
           type="single"
           collapsible
-          className="flex flex-wrap w-full gap-6"
+          value={openItem}
+          onValueChange={(value) => setOpenItem(value)}
+          className="grid w-full gap-6 items-start md:grid-cols-2"
         >
           {faqs.map((faq, index) => {
             const itemValue = `item-${index + 1}`;
@@ -54,19 +52,14 @@ const Questions: React.FC = () => {
               <AccordionItem
                 key={index}
                 value={itemValue}
-                className="bg-white w-[45%] shadow-sm px-8 rounded-lg border-none"
+                className="rounded-2xl border border-border/40 bg-white px-6 py-4 shadow-sm transition-shadow hover:shadow-md focus-within:ring-2 focus-within:ring-primary/30"
               >
-                <AccordionTrigger
-                  className={`flex justify-between items-center px-4 cursor-pointer ${
-                    isOpen ? "" : "min-h-32"
-                  }`}
-                  onClick={() => handleToggle(itemValue)}
-                >
-                  <h1 className="dm-sans-font font-medium text-xl">
+                <AccordionTrigger className="flex w-full items-start justify-between gap-4 text-left">
+                  <h2 className="dm-sans-font text-xl font-medium leading-7">
                     {faq.question}
-                  </h1>
+                  </h2>
                   <span
-                    className={`flex justify-center items-center h-11 w-11 rounded-xl shadow transition-all duration-300 ${
+                    className={`flex h-11 w-11 items-center justify-center rounded-2xl shadow transition-colors duration-300 ${
                       isOpen
                         ? "bg-primary text-white"
                         : "bg-secondary-foreground text-black"
@@ -76,20 +69,18 @@ const Questions: React.FC = () => {
                   </span>
                 </AccordionTrigger>
 
-                <div
-                  className={`overflow-hidden transition-[max-height] duration-500 ease-in-out px-4 flex flex-col gap-[13px] ${
-                    isOpen ? "max-h-[1000px]" : "max-h-0 pt-0"
-                  }`}
-                >
-                  {faq.answer.map((ans, i) => (
-                    <p
-                      key={i}
-                      className="text-lg dm-sans-font pb-14 pr-24 leading-8 text-muted-foreground"
-                    >
-                      {ans}
-                    </p>
-                  ))}
-                </div>
+                <AccordionContent className="px-1 text-base">
+                  <div className="flex flex-col gap-3 pt-2">
+                    {faq.answer.map((ans, i) => (
+                      <p
+                        key={i}
+                        className="dm-sans-font leading-7 text-muted-foreground"
+                      >
+                        {ans}
+                      </p>
+                    ))}
+                  </div>
+                </AccordionContent>
               </AccordionItem>
             );
           })}
