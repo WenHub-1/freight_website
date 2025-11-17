@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Container from "@/components/ui/Container";
+import Container from "@/components/ui/container";
 import FeatureImg from "@/assets/images/FeatureSection.png";
 import Img1 from "@/assets/images/discount-shape.png";
 import Img2 from "@/assets/images/truck-tick.png";
