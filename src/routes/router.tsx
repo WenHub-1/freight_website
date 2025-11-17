@@ -4,7 +4,7 @@ import { APP_ROUTES } from "../lib";
 import ErrorElement from "../components/common/error-element";
 import MainLayout from "../components/layouts/main-layout";
 
-const Dashboard = lazy(() => import("../pages/dashboard"));
+const Dashboard = lazy(() => import("../pages/dashboard/dashboard"));
 const Login = lazy(() => import("../pages/login"));
 const Theme = lazy(() => import("../pages/theme"));
 
