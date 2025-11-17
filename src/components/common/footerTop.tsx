@@ -8,7 +8,7 @@ const FooterTop: React.FC = () => {
     <div className="flex h-[30vh] relative justify-center">
       <div className="absolute -bottom-14 ">
         <div
-          className="w-full max-w-[994px] h-[304px] flex  items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"
+          className="w-full max-w-[1110px] h-[304px] flex  items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"
           style={{ backgroundImage: `url(${FooterBackgroundImg})` }}
         >
           {/* Text + Button */}
