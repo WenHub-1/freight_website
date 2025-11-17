@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import HeroSectionPicture from "../../assets/images/HeroSectionPicture.png";
-import Container from "@/components/ui/Container";
+import Container from "@/components/ui/container";
 
 const HeroSection: React.FC = () => {
   const { t } = useTranslation();

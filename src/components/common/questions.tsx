@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Container from "../ui/Container";
+import Container from "../ui/container";
 import { Accordion } from "@/components/ui/accordion";
 import { useTranslation } from "react-i18next";
-import FaqCard from "./faqCard";
+import FaqCard from "./faq-card";
 
 // Types
 interface FaqItem {

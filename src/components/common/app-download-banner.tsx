@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Container from "@/components/ui/Container";
+import Container from "@/components/ui/container";
 import { Button } from "../ui/button";
-import PhoneImg from "@/assets/images/PhoneBanner.png";
-import AppStoreImg from "@/assets/images/AppStore.png";
-import PlayStoreImg from "@/assets/images/GooglePlay.png";
+import phoneImg from "@/assets/images/PhoneBanner.png";
+import appStoreImg from "@/assets/images/AppStore.png";
+import playStoreImg from "@/assets/images/GooglePlay.png";
 
 const AppDownloadBanner: React.FC = () => {
   const { t } = useTranslation();
@@ -16,7 +16,7 @@ const AppDownloadBanner: React.FC = () => {
           <div className="flex flex-col gap-6 w-8/12">
             <Button
               size="lg"
-              className="flex relative text-base font-semibold inter-font gap-2 w-36"
+              className="flex  text-base font-semibold inter-font gap-2 w-36"
             >
               <div className=" h-2 w-2 shrink-0 rounded-full bg-white"></div>
               {t("dashboard.appDownloadBanner.buttonText")}
@@ -27,13 +27,13 @@ const AppDownloadBanner: React.FC = () => {
             <div className="flex gap-6 items-center">
               <div>
                 <img
-                  src={AppStoreImg}
+                  src={appStoreImg}
                   alt={t("dashboard.appDownloadBanner.buttonText")}
                 />
               </div>
               <div>
                 <img
-                  src={PlayStoreImg}
+                  src={playStoreImg}
                   alt={t("dashboard.appDownloadBanner.buttonText")}
                 />
               </div>
@@ -43,7 +43,7 @@ const AppDownloadBanner: React.FC = () => {
         <div>
           <img
             className="rounded-2xl w-full h-full"
-            src={PhoneImg}
+            src={phoneImg}
             alt={t("dashboard.appDownloadBanner.title")}
           />
         </div>

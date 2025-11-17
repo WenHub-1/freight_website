@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Container from "@/components/ui/Container";
+import Container from "@/components/ui/container";
 import VehicleImg from "@/assets/images/VehicleImg.png";
 
 const VehicleSection: React.FC = () => {

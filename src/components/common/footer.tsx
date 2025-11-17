@@ -1,12 +1,11 @@
 import React from "react";
-import Container from "../ui/Container";
+import Container from "../ui/container";
 import QdamlogoImg from "@/assets/images/Qdamlogo.png";
-import FooterTop from "./footerTop.tsx";
+import FooterTop from "./footer-top.tsx";
 import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
-import InstagramImg from "@/assets/images/Instagram.png";
-import SnapChatImg from "@/assets/images/SnapChat.png";
-
+import SnapChat from "@/assets/svg/snapChat.tsx";
+import Instagram from "@/assets/svg/instagram.tsx";
 // Define types for footer data
 interface FooterSection {
   title: string;
@@ -67,12 +66,8 @@ const Footer: React.FC = () => {
 
             <div className="flex flex-col gap-3">
               <div className="flex gap-4">
-                <div>
-                  <img src={InstagramImg} alt="Instagram" />
-                </div>
-                <div>
-                  <img src={SnapChatImg} alt="Snapchat" />
-                </div>
+                <Instagram />
+                <SnapChat />
               </div>
               <div className="flex justify-between">
                 <h2 className="roboto-font">

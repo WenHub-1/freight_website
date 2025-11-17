@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Container from "../ui/Container";
+import Container from "../ui/container";
 import type { NavItem } from "../../types/interface";
 import {
   DropdownMenu,

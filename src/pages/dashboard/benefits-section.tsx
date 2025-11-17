@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Container from "@/components/ui/Container";
+import Container from "@/components/ui/container";
 import BoxImg from "@/assets/images/BeniefitsSectionBox.png";
 import BusImg from "@/assets/images/BeniefitsSectionBus.png";
 import PhoneImg from "@/assets/images/BeniefitsSectionPhone.png";
