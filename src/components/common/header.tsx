@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "../ui/container";
 import type { NavItem } from "../../types/interface";
+import { Link } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -68,7 +69,7 @@ const Header: React.FC = () => {
                   </DropdownMenu>
                 ) : (
                   <li className="inline-block mx-4 cursor-pointer">
-                    <a>{item.label}</a>
+                    <Link to={item.link || "#"}>{item.label}</Link>
                   </li>
                 )}
               </div>

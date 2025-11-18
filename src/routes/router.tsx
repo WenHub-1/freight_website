@@ -7,6 +7,7 @@ import MainLayout from "../components/layouts/main-layout";
 const Dashboard = lazy(() => import("../pages/dashboard/dashboard"));
 const Login = lazy(() => import("../pages/login"));
 const Theme = lazy(() => import("../pages/theme"));
+const ShipWithUs = lazy(() => import("../pages/ship-with-us/ship-with-us.tsx"));
 
 const appRoutes = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const appRoutes = createBrowserRouter([
       {
         path: APP_ROUTES.theme,
         element: <Theme />,
+      },
+      {
+        path: "/ship-with-us",
+        element: <ShipWithUs />,
       },
     ],
   },

@@ -1,15 +1,18 @@
 {
   "header": {
     "nav": [
-      { "label": "Ship with Us" },
-      { "label": "Become a Driver" },
-      { "label": "Partner" },
+      {
+        "label": "Ship with Us",
+        "link": "/ship-with-us"
+      },
+      { "label": "Become a Driver", "link": "/become-driver" },
+      { "label": "Partner", "link": "/partner" },
       {
         "label": "Company",
         "dropdown": [
-          { "label": "About Us" },
-          { "label": "Careers" },
-          { "label": "Contact" }
+          { "label": "About Us", "link": "/about" },
+          { "label": "Careers", "link": "/careers" },
+          { "label": "Contact", "link": "/contact" }
         ]
       }
     ],
@@ -119,6 +122,30 @@
         {
           "question": "Support",
           "answer": ["Our support team is available 24/7."]
+        }
+      ]
+    }
+  },
+  "shipWithUs": {
+    "title": "Ship with us",
+    "featureSection": {
+      "title": "Quick. Easy. Affordable.",
+      "items": [
+        {
+          "title": "Affordable",
+          "subtitle": "Easy negotiation between shipper and the driver to get the right price"
+        },
+        {
+          "title": "Order matching",
+          "subtitle": "Choose from various vehicles for your delivery needs."
+        },
+        {
+          "title": "Verified Drivers",
+          "subtitle": "Every driver is verified to ensure reliable and professional service."
+        },
+        {
+          "title": "Real-time tracking",
+          "subtitle": "Real-time tracking for your bookings."
         }
       ]
     }
