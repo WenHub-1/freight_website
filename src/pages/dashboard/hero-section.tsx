@@ -23,11 +23,13 @@ const HeroSection: React.FC = () => {
               {hero.title}
             </h1>
             <p className="text-2xl inter-font font-normal">{hero.subtitle}</p>
-            <Button className="h-14 w-52">{hero.buttonText}</Button>
+            <Button className="h-14 text-lg font-medium roboto-font w-52">
+              {hero.buttonText}
+            </Button>
           </div>
           <div>
             <img
-              className="rounded-[17px]"
+              className="rounded-[17px] h-full"
               src={HeroSectionPicture}
               alt="Hero"
             />
