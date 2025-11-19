@@ -1,18 +1,19 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import FeatureSection from "@/components/common/feature-section";
-import FeatureImg from "@/assets/images/FeatureSection.png";
-import Img1 from "@/assets/svg/discount";
-import Img2 from "@/assets/svg/truck";
-import Img3 from "@/assets/svg/user-tick";
-import Img4 from "@/assets/svg/routing-2";
+
+import DriverMainImg from "@/assets/images/FeatureSection.png";
+import Img1 from "@/assets/svg/clock";
+import Img2 from "@/assets/svg/priceTag";
+import Img3 from "@/assets/svg/secure-payments";
+import Img4 from "@/assets/svg/ranking";
 
 const images = [Img1, Img2, Img3, Img4];
 
-const DashboardFeatureSection: React.FC = () => {
+const DriverFeatureSection: React.FC = () => {
   const { t } = useTranslation();
 
-  const section = t("dashboard.featureSection", { returnObjects: true }) as {
+  const section = t("becomeDriver.featureSection", { returnObjects: true }) as {
     title: string;
     items: { title: string; subtitle: string }[];
   };
@@ -26,9 +27,10 @@ const DashboardFeatureSection: React.FC = () => {
     <FeatureSection
       title={section.title}
       items={itemsWithImages}
-      mainImage={FeatureImg}
+      mainImage={DriverMainImg}
+      bgImageStyle={false}
     />
   );
 };
 
-export default DashboardFeatureSection;
+export default DriverFeatureSection;

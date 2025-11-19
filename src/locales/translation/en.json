@@ -5,7 +5,7 @@
         "label": "Ship with Us",
         "link": "/ship-with-us"
       },
-      { "label": "Become a Driver", "link": "/become-driver" },
+      { "label": "Become a Driver", "link": "/become-a-driver" },
       { "label": "Partner", "link": "/partner" },
       {
         "label": "Company",
@@ -146,6 +146,30 @@
         {
           "title": "Real-time tracking",
           "subtitle": "Real-time tracking for your bookings."
+        }
+      ]
+    }
+  },
+  "becomeDriver": {
+    "title": "Become a Driver",
+    "featureSection": {
+      "title": "Why deliver with Qdam?",
+      "items": [
+        {
+          "title": "Flexible hours",
+          "subtitle": "Choose when you want to work and manage deliveries on your own schedule."
+        },
+        {
+          "title": "Your prices",
+          "subtitle": "Set your own delivery rates and earn what you deserve for every trip."
+        },
+        {
+          "title": "Secure payments",
+          "subtitle": "Receive payments safely and on time through our trusted in-app system."
+        },
+        {
+          "title": "Ranking performance",
+          "subtitle": "Boost your profile by completing more orders and maintaining top ratings."
         }
       ]
     }
