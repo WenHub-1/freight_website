@@ -4,5 +4,5 @@ export const APP_ROUTES = {
   home: "/",
   login: "/login",
   theme: "/theme",
-  ShipWithUs: "/ship-with-us",
+  shipWithUs: "/ship-with-us",
 };

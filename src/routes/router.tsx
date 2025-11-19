@@ -28,7 +28,7 @@ const appRoutes = createBrowserRouter([
         element: <Theme />,
       },
       {
-        path: APP_ROUTES.ShipWithUs,
+        path: APP_ROUTES.shipWithUs,
         element: <ShipWithUs />,
       },
     ],
