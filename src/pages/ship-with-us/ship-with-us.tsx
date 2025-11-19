@@ -7,10 +7,10 @@ import BeniefitsSectionBoxImg from "@/assets/images/BeniefitsSectionBox.png";
 // import FeatureImg from "@/assets/images/FeatureSection.png";
 import AppDownloadBanner from "@/components/common/app-download-banner";
 import Questions from "@/components/common/questions";
-import Img1 from "@/assets/images/discount-shape.png";
-import Img2 from "@/assets/images/truck-tick.png";
-import Img3 from "@/assets/images/user-tick.png";
-import Img4 from "@/assets/images/routing-2.png";
+import Img1 from "@/assets/svg/discount";
+import Img2 from "@/assets/svg/truck";
+import Img3 from "@/assets/svg/user-tick";
+import Img4 from "@/assets/svg/routing-2";
 
 const images = [Img1, Img2, Img3, Img4];
 
@@ -24,7 +24,7 @@ const ShipWithUs: React.FC = () => {
 
   const itemsWithImages = section.items.map((item, index) => ({
     ...item,
-    image: images[index],
+    Icon: images[index],
   }));
 
   return (

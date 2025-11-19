@@ -11,9 +11,9 @@ const AppDownloadBanner: React.FC = () => {
 
   return (
     <Container>
-      <div className="flex w-full">
-        <div className="bg-secondary-foreground rounded-2xl flex items-center p-12">
-          <div className="flex flex-col gap-6 w-8/12">
+      <div className="flex w-ful justify-between ">
+        <div className="bg-secondary-foreground rounded-2xl flex items-center p-12 w-[70%]">
+          <div className="flex flex-col gap-6 w-11/12">
             <Button
               size="lg"
               className="flex  text-base font-semibold inter-font gap-2 w-36"
@@ -39,7 +39,7 @@ const AppDownloadBanner: React.FC = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="w-[35%] flex justify-end">
           <img
             className="rounded-2xl w-full h-full"
             src={phoneImg}

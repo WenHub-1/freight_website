@@ -5,4 +5,5 @@ export const APP_ROUTES = {
   login: "/login",
   theme: "/theme",
   shipWithUs: "/ship-with-us",
+  becomeADriver: "/become-a-driver",
 };
