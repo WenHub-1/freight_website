@@ -31,11 +31,11 @@
       "items": ["Ship with us", "Become a driver", "Partner & earn"]
     },
     "company": {
-      "title": "Company",
+      "title": "COMPANY",
       "items": ["About Us", "Careers", " Contact us"]
     },
     "legal": {
-      "title": "Legal",
+      "title": "LEGAL",
       "items": ["Privacy Policy", "Terms & Conditions", "Cookie Policy"]
     }
   },
