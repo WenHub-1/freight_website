@@ -41,9 +41,9 @@ const Header: React.FC = () => {
       <Container className="flex  justify-between">
         {/* Left: Logo + Nav */}
         <div className="flex gap-16  items-center space-x-4">
-          <div className="">
-            <img src={Qadamlogo} alt="" />
-          </div>
+          <Link to="/" className="">
+            <img src={Qadamlogo} alt="Qadam Logo" className="cursor-pointer" />
+          </Link>
 
           <ul className="flex gap-7 text-base items-center">
             {navItems.map((item, index) => (

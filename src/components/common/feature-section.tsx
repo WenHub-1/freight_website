@@ -26,9 +26,9 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
         {mainImage &&
           (bgImageStyle ? (
             <div className="p-4 h-[527px] w-[557px] flex justify-center items-center rounded-2xl shadow-sm">
-              <div>
+              <div className="w-[71.5%] h-[59%]">
                 <img
-                  className="w-[375px] h-[290px] object-contain max-w-full"
+                  className="w-full h-full object-contain max-w-full"
                   src={mainImage}
                   alt=""
                 />
