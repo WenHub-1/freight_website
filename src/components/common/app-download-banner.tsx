@@ -18,7 +18,6 @@ const AppDownloadBanner: React.FC = () => {
               size="lg"
               className="flex  text-base font-semibold inter-font gap-2 w-36"
             >
-              <div className=" h-2 w-2 shrink-0 rounded-full bg-white"></div>
               {t("dashboard.appDownloadBanner.buttonText")}
             </Button>
             <h1 className="text-[40px] font-semibold leading-[140%]">
