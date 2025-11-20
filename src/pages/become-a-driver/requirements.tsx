@@ -54,7 +54,7 @@ const Requirements: React.FC = () => {
         <div className="flex items-center min-h-[304px] min-w-[936px] mx-auto rounded-[20px] bg-secondary-foreground justify-center gap-10">
           <div>
             <img
-              src="https://media.discordapp.net/attachments/1295339641582522398/1441028831765860414/image.png?ex=69204e2e&is=691efcae&hm=ef9c04713f08335a8dfd651bba02d33503619b557ac943f724cae37eeeaa08c5&=&format=webp&quality=lossless"
+              src="https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/requirement-list.png"
               alt="Requirements Document"
               className="w-48 h-56 object-contain"
             />

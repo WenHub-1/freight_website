@@ -44,9 +44,10 @@ const Footer: React.FC = () => {
                   <img
                     src=" https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qdamlogo.png"
                     alt="Qdam Logo"
+                    className="w-9 h-11"
                   />
                 </div>
-                <p className="max-w-3xs text-base roboto-font">
+                <p className="max-w-3xs  text-base roboto-font">
                   {footerData.description}
                 </p>
               </div>
