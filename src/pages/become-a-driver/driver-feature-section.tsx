@@ -1,8 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import FeatureSection from "@/components/common/feature-section";
-
-import DriverMainImg from "@/assets/images/FeatureSection.png";
 import Img1 from "@/assets/svg/clock";
 import Img2 from "@/assets/svg/priceTag";
 import Img3 from "@/assets/svg/secure-payments";
@@ -27,7 +25,9 @@ const DriverFeatureSection: React.FC = () => {
     <FeatureSection
       title={section.title}
       items={itemsWithImages}
-      mainImage={DriverMainImg}
+      mainImage={
+        "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/FeatureSection.png"
+      }
       bgImageStyle={false}
     />
   );

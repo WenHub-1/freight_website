@@ -1,7 +1,5 @@
 import React from "react";
-import FooterBackgroundImg from "@/assets/images/FooterBackground.png";
 import { Button } from "../ui/button";
-import HandIPhoneImg from "@/assets/images/HandIphone.png";
 
 const FooterTop: React.FC = () => {
   return (
@@ -9,7 +7,9 @@ const FooterTop: React.FC = () => {
       <div className="absolute -bottom-14 ">
         <div
           className="w-full max-w-[1110px] h-[304px] flex  items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"
-          style={{ backgroundImage: `url(${FooterBackgroundImg})` }}
+          style={{
+            backgroundImage: `url("https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/FooterBackground.png")`,
+          }}
         >
           {/* Text + Button */}
           <div className="p-12 flex flex-col gap-7">
@@ -27,7 +27,11 @@ const FooterTop: React.FC = () => {
 
           {/* iPhone Image */}
           <div className="h-full shrink-0">
-            <img className="h-full object-contain" src={HandIPhoneImg} alt="" />
+            <img
+              className="h-full object-contain"
+              src="https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/HandIphone.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

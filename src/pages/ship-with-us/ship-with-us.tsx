@@ -3,8 +3,6 @@ import FeatureSection from "@/components/common/feature-section";
 import Container from "@/components/ui/container";
 import PageHeading from "@/components/common/page-heading";
 import VehicleSection from "@/components/common/vehicle-section";
-import BeniefitsSectionBoxImg from "@/assets/images/BeniefitsSectionBox.png";
-// import FeatureImg from "@/assets/images/FeatureSection.png";
 import AppDownloadBanner from "@/components/common/app-download-banner";
 import Questions from "@/components/common/questions";
 import Img1 from "@/assets/svg/discount";
@@ -35,7 +33,9 @@ const ShipWithUs: React.FC = () => {
         <FeatureSection
           title={section.title}
           items={itemsWithImages}
-          mainImage={BeniefitsSectionBoxImg}
+          mainImage={
+            " https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionBox.png"
+          }
           bgImageStyle={true} // big image on left
         />
         <VehicleSection />

@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { Globe, ChevronDown } from "lucide-react";
-import Qadamlogo from "../../assets/images/Qdamlogo.png";
 interface IHeaderButtons {
   language: {
     english: string;
@@ -42,7 +41,11 @@ const Header: React.FC = () => {
         {/* Left: Logo + Nav */}
         <div className="flex gap-16  items-center ">
           <Link to="/" className="">
-            <img src={Qadamlogo} alt="Qadam Logo" className="cursor-pointer" />
+            <img
+              src=" https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qdamlogo.png"
+              alt="Qadam Logo"
+              className="cursor-pointer"
+            />
           </Link>
 
           <ul className="flex gap-7 text-base items-center">

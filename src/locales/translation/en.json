@@ -2,15 +2,15 @@
   "header": {
     "nav": [
       {
-        "label": "Ship with Us",
+        "label": "Ship with us",
         "link": "/ship-with-us"
       },
-      { "label": "Become a Driver", "link": "/become-a-driver" },
+      { "label": "Become a driver", "link": "/become-a-driver" },
       { "label": "Partner", "link": "/partner" },
       {
         "label": "Company",
         "dropdown": [
-          { "label": "About Us", "link": "/about" },
+          { "label": "About us", "link": "/about" },
           { "label": "Careers", "link": "/careers" },
           { "label": "Contact", "link": "/contact" }
         ]
@@ -21,7 +21,7 @@
         "english": "English",
         "arabic": "العربية"
       },
-      "download": "Download App"
+      "download": "Download the App"
     }
   },
   "footer": {
@@ -171,6 +171,18 @@
           "title": "Ranking performance",
           "subtitle": "Boost your profile by completing more orders and maintaining top ratings."
         }
+      ]
+    },
+    "requirementsSection": {
+      "title": "Requirements to start delivering with Qdam",
+      "subtitle": "Submit your documents and get verified to begin delivering.",
+      "items": [
+        { "label": "A Vehicle" },
+        { "label": "Personal Identification" },
+        { "label": "Vehical registration" },
+        { "label": "Smartphone" },
+        { "label": "Driver license" },
+        { "label": "Age above 18" }
       ]
     }
   }

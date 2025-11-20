@@ -1,12 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
-import BoxImg from "@/assets/images/BeniefitsSectionBox.png";
-import BusImg from "@/assets/images/BeniefitsSectionBus.png";
-import PhoneImg from "@/assets/images/BeniefitsSectionPhone.png";
 import { ArrowRight } from "lucide-react";
 
-const images = [BoxImg, BusImg, PhoneImg];
+const images = [
+  "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionBox.png",
+  "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionBus.png",
+  "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionPhone.png",
+];
 
 const BenefitsSection: React.FC = () => {
   const { t } = useTranslation();

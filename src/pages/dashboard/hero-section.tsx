@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import HeroSectionPicture from "../../assets/images/HeroSectionPicture.png";
 import Container from "@/components/ui/container";
 
 const HeroSection: React.FC = () => {
@@ -30,7 +29,7 @@ const HeroSection: React.FC = () => {
           <div>
             <img
               className="rounded-[17px] h-full"
-              src={HeroSectionPicture}
+              src="https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/HeroSectionPicture.png"
               alt="Hero"
             />
           </div>
