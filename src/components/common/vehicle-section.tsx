@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
+import { DASHBOARD_IMAGES } from "./constants/file-image-url";
 
 const VehicleSection: React.FC = () => {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ const VehicleSection: React.FC = () => {
         </h1>
         <div className="w-full">
           <img
-            src="https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/VehicleImg.png"
+            src={DASHBOARD_IMAGES.VEHICLE_SECTION}
             alt={t("dashboard.vehicleSection.title")}
             className="rounded-2xl w-full h-auto object-cover"
           />

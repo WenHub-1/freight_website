@@ -1,14 +1,15 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { FOOTER_IMAGES } from "@/components/common/constants/file-image-url";
 
 const FooterTop: React.FC = () => {
   return (
     <div className="flex h-[30vh] relative justify-center">
-      <div className="absolute -bottom-14 ">
+      <div className="absolute -bottom-14">
         <div
-          className="w-full max-w-[1110px] h-[304px] flex  items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"
+          className="w-full max-w-[1110px] h-[304px] flex items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"
           style={{
-            backgroundImage: `url("https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/FooterBackground.png")`,
+            backgroundImage: `url(${FOOTER_IMAGES.BACKGROUND})`,
           }}
         >
           {/* Text + Button */}
@@ -29,8 +30,8 @@ const FooterTop: React.FC = () => {
           <div className="h-full shrink-0">
             <img
               className="h-full object-contain"
-              src="https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/HandIphone.png"
-              alt=""
+              src={FOOTER_IMAGES.HAND_PHONE}
+              alt="Hand holding iPhone"
             />
           </div>
         </div>

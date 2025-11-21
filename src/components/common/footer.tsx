@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 import SnapChat from "@/assets/svg/snapChat.tsx";
 import Instagram from "@/assets/svg/instagram.tsx";
+import { GLOBAL_IMAGES } from "@/components/common/constants/file-image-url";
+
 // Define types for footer data
 interface FooterSection {
   title: string;
@@ -42,7 +44,7 @@ const Footer: React.FC = () => {
               <div className="flex flex-col gap-6">
                 <div>
                   <img
-                    src=" https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qdamlogo.png"
+                    src={GLOBAL_IMAGES.LOGO_QDAM}
                     alt="Qdam Logo"
                     className="w-9 h-11"
                   />

@@ -10,6 +10,8 @@ import IdentificationIcon from "@/assets/svg/identification";
 import SmartphoneIcon from "@/assets/svg/smartphone";
 import AgeIcon from "@/assets/svg/user";
 
+import { BECOME_DRIVER_IMAGES } from "@/components/common/constants/file-image-url";
+
 const icons = [
   VehicleIcon,
   IdentificationIcon,
@@ -54,7 +56,7 @@ const Requirements: React.FC = () => {
         <div className="flex items-center min-h-[304px] min-w-[936px] mx-auto rounded-[20px] bg-secondary-foreground justify-center gap-10">
           <div>
             <img
-              src="https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/requirement-list.png"
+              src={BECOME_DRIVER_IMAGES.REQUIREMENT_LIST}
               alt="Requirements Document"
               className="w-48 h-56 object-contain"
             />

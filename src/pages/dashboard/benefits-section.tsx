@@ -2,13 +2,13 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
 import { ArrowRight } from "lucide-react";
+import { DASHBOARD_IMAGES } from "@/components/common/constants/file-image-url";
 
 const images = [
-  "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionBox.png",
-  "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionBus.png",
-  "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionPhone.png",
+  DASHBOARD_IMAGES.BENEFITS_SECTION.BOX,
+  DASHBOARD_IMAGES.BENEFITS_SECTION.TRUCK,
+  DASHBOARD_IMAGES.BENEFITS_SECTION.PHONE,
 ];
-
 const BenefitsSection: React.FC = () => {
   const { t } = useTranslation();
   const benefits = t("dashboard.benefitsSection", { returnObjects: true }) as {
