@@ -1,11 +1,12 @@
 import React from "react";
 import Container from "../ui/container";
-import QdamlogoImg from "@/assets/images/Qdamlogo.png";
 import FooterTop from "./footer-top.tsx";
 import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 import SnapChat from "@/assets/svg/snapChat.tsx";
 import Instagram from "@/assets/svg/instagram.tsx";
+import { GLOBAL_IMAGES } from "@/components/common/constants/file-image-url";
+
 // Define types for footer data
 interface FooterSection {
   title: string;
@@ -42,9 +43,15 @@ const Footer: React.FC = () => {
               {/* LEFT logo + description */}
               <div className="flex flex-col gap-6">
                 <div>
-                  <img src={QdamlogoImg} alt="Qdam Logo" />
+                  <img
+                    src={GLOBAL_IMAGES.LOGO_QDAM}
+                    alt="Qdam Logo"
+                    className="w-9 h-11"
+                  />
                 </div>
-                <p className="max-w-3xs">{footerData.description}</p>
+                <p className="max-w-3xs  text-base roboto-font">
+                  {footerData.description}
+                </p>
               </div>
 
               {/* Dynamic sections */}
@@ -70,7 +77,7 @@ const Footer: React.FC = () => {
                 <SnapChat />
               </div>
               <div className="flex justify-between">
-                <h2 className="roboto-font">
+                <h2 className="roboto-font text-sm">
                   Qdam © 2025, All Rights Reserved
                 </h2>
                 <div className="flex gap-2">

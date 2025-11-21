@@ -1,15 +1,16 @@
 import React from "react";
-import FooterBackgroundImg from "@/assets/images/FooterBackground.png";
 import { Button } from "../ui/button";
-import HandIPhoneImg from "@/assets/images/HandIphone.png";
+import { FOOTER_IMAGES } from "@/components/common/constants/file-image-url";
 
 const FooterTop: React.FC = () => {
   return (
     <div className="flex h-[30vh] relative justify-center">
-      <div className="absolute -bottom-14 ">
+      <div className="absolute -bottom-14">
         <div
-          className="w-full max-w-[1110px] h-[304px] flex  items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"
-          style={{ backgroundImage: `url(${FooterBackgroundImg})` }}
+          className="w-full max-w-[1110px] h-[304px] flex items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${FOOTER_IMAGES.BACKGROUND})`,
+          }}
         >
           {/* Text + Button */}
           <div className="p-12 flex flex-col gap-7">
@@ -27,7 +28,11 @@ const FooterTop: React.FC = () => {
 
           {/* iPhone Image */}
           <div className="h-full shrink-0">
-            <img className="h-full object-contain" src={HandIPhoneImg} alt="" />
+            <img
+              className="h-full object-contain"
+              src={FOOTER_IMAGES.HAND_PHONE}
+              alt="Hand holding iPhone"
+            />
           </div>
         </div>
       </div>

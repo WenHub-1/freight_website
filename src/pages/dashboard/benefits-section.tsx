@@ -1,13 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
-import BoxImg from "@/assets/images/BeniefitsSectionBox.png";
-import BusImg from "@/assets/images/BeniefitsSectionBus.png";
-import PhoneImg from "@/assets/images/BeniefitsSectionPhone.png";
 import { ArrowRight } from "lucide-react";
+import { DASHBOARD_IMAGES } from "@/components/common/constants/file-image-url";
 
-const images = [BoxImg, BusImg, PhoneImg];
-
+const images = [
+  DASHBOARD_IMAGES.BENEFITS_SECTION.BOX,
+  DASHBOARD_IMAGES.BENEFITS_SECTION.TRUCK,
+  DASHBOARD_IMAGES.BENEFITS_SECTION.PHONE,
+];
 const BenefitsSection: React.FC = () => {
   const { t } = useTranslation();
   const benefits = t("dashboard.benefitsSection", { returnObjects: true }) as {
