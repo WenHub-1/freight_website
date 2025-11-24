@@ -14,7 +14,11 @@ const PageHeading: React.FC<PageHeadingProps> = ({ title, button }) => {
         <div className="flex gap-12  items-center bg-secondary p-10 rounded-2xl">
           <h1 className=" text-[52px] text-white font-semibold">{title}</h1>
           {button && (
-            <Button className="h-14 roboto-font font-medium text-[18px]  w-52">
+            <Button
+              className="h-14 roboto-font font-medium text-[18px] w-52  shadow-[0_0_15px_#98c73980]
+  
+   "
+            >
               Download the app
             </Button>
           )}

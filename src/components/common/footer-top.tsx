@@ -16,7 +16,7 @@ const FooterTop: React.FC = () => {
           <div className="p-12 flex flex-col gap-7">
             <div className="flex flex-col gap-3">
               <h1 className="font-semibold text-4xl">Get started with QDAM</h1>
-              <p className="inter-font text-base">
+              <p className="inter-font text-base max-w-[387px]">
                 Join us as a delivery driver or partner and start earning right
                 now!
               </p>

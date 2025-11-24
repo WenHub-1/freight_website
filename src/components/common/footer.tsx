@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                     className="w-9 h-11"
                   />
                 </div>
-                <p className="max-w-3xs  text-base roboto-font">
+                <p className=" max-w-[248px]  text-sm  roboto-font">
                   {footerData.description}
                 </p>
               </div>
