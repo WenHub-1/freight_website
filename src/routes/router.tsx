@@ -8,6 +8,7 @@ const Dashboard = lazy(() => import("../pages/dashboard/dashboard"));
 const Login = lazy(() => import("../pages/login"));
 const Theme = lazy(() => import("../pages/theme"));
 const ShipWithUs = lazy(() => import("../pages/ship-with-us/ship-with-us.tsx"));
+const Partners = lazy(() => import("../pages/partners/partners.tsx"));
 const BecomeADriver = lazy(
   () => import("../pages/become-a-driver/become-a-driver.tsx"),
 );
@@ -37,6 +38,10 @@ const appRoutes = createBrowserRouter([
       {
         path: APP_ROUTES.becomeADriver,
         element: <BecomeADriver />,
+      },
+      {
+        path: APP_ROUTES.partners,
+        element: <Partners />,
       },
     ],
   },
