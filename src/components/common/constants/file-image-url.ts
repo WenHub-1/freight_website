@@ -3,7 +3,9 @@
 // ===============================
 export const GLOBAL_IMAGES = {
   LOGO_QDAM:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qdamlogo.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011348.png",
+  LOGO_QDAM2:
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qadaam%20Logo%20Final%20white%201.png",
 };
 
 // ===============================
@@ -22,7 +24,7 @@ export const DASHBOARD_IMAGES = {
   },
 
   FEATURE_SECTION:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/FeatureSection.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011350.png",
 
   VEHICLE_SECTION:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/VehicleImg.png",
@@ -60,8 +62,15 @@ export const SHIP_WITH_US_IMAGES = {
 // ===============================
 export const BECOME_DRIVER_IMAGES = {
   FEATURE_SECTION:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/FeatureSection.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011350.png",
 
   REQUIREMENT_LIST:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/requirement-list.png",
+};
+
+export const CAREER = {
+  HERO_SECTION:
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/image%2013.png",
+  CAREER_AT_QDAM:
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011344.png",
 };
