@@ -43,11 +43,7 @@ const Footer: React.FC = () => {
               {/* LEFT logo + description */}
               <div className="flex flex-col gap-6">
                 <div>
-                  <img
-                    src={GLOBAL_IMAGES.LOGO_QDAM}
-                    alt="Qdam Logo"
-                    className="w-9 h-11"
-                  />
+                  <img src={GLOBAL_IMAGES.LOGO_QDAM2} alt="Qdam Logo" />
                 </div>
                 <p className=" max-w-[248px]  text-sm  roboto-font">
                   {footerData.description}

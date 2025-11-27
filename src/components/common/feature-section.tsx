@@ -22,7 +22,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
 }) => {
   return (
     <Container>
-      <div className="flex justify-center gap-[120px]">
+      <div className="flex justify-center items-center gap-[120px]">
         {mainImage &&
           (bgImageStyle ? (
             <div className="p-4 min-h-[527px] min-w-[557px] mx-auto flex justify-center items-center rounded-2xl shadow-sm">

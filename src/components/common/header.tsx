@@ -67,7 +67,7 @@ const Header: React.FC = () => {
                     <DropdownMenuContent className="w-56" align="start">
                       {item.dropdown?.map((drop, idx) => (
                         <DropdownMenuItem key={idx}>
-                          {drop.label}
+                          <Link to={drop.link || "#"}>{drop.label}</Link>
                         </DropdownMenuItem>
                       ))}
                     </DropdownMenuContent>

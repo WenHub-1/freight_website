@@ -8,6 +8,13 @@ const Dashboard = lazy(() => import("../pages/dashboard/dashboard"));
 const Login = lazy(() => import("../pages/login"));
 const Theme = lazy(() => import("../pages/theme"));
 const ShipWithUs = lazy(() => import("../pages/ship-with-us/ship-with-us.tsx"));
+const Partners = lazy(() => import("../pages/partners/partners.tsx"));
+const ContactUs = lazy(
+  () => import("../pages/company/contact-us/contact-us.tsx"),
+);
+const AboutUs = lazy(() => import("../pages/company/about-us/about-us.tsx"));
+const Careers = lazy(() => import("../pages/company/careers/careers.tsx"));
+
 const BecomeADriver = lazy(
   () => import("../pages/become-a-driver/become-a-driver.tsx"),
 );
@@ -37,6 +44,22 @@ const appRoutes = createBrowserRouter([
       {
         path: APP_ROUTES.becomeADriver,
         element: <BecomeADriver />,
+      },
+      {
+        path: APP_ROUTES.partners,
+        element: <Partners />,
+      },
+      {
+        path: APP_ROUTES.contactUs,
+        element: <ContactUs />,
+      },
+      {
+        path: APP_ROUTES.aboutUs,
+        element: <AboutUs />,
+      },
+      {
+        path: APP_ROUTES.careers,
+        element: <Careers />,
       },
     ],
   },

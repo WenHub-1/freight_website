@@ -6,4 +6,8 @@ export const APP_ROUTES = {
   theme: "/theme",
   shipWithUs: "/ship-with-us",
   becomeADriver: "/become-a-driver",
+  partners: "/partners",
+  contactUs: "/contact-us",
+  aboutUs: "/about-us",
+  careers: "/careers",
 };

@@ -6,13 +6,13 @@
         "link": "/ship-with-us"
       },
       { "label": "Become a driver", "link": "/become-a-driver" },
-      { "label": "Partner", "link": "/partner" },
+      { "label": "Partner", "link": "/partners" },
       {
         "label": "Company",
         "dropdown": [
-          { "label": "About us", "link": "/about" },
+          { "label": "About us", "link": "/about-us" },
           { "label": "Careers", "link": "/careers" },
-          { "label": "Contact", "link": "/contact" }
+          { "label": "Contact", "link": "/contact-us" }
         ]
       }
     ],
@@ -183,6 +183,58 @@
         { "label": "Smartphone" },
         { "label": "Driver license" },
         { "label": "Age above 18" }
+      ]
+    }
+  },
+  "partners": {
+    "featureSection": {
+      "title": "Become partner and earn",
+      "items": [
+        {
+          "title": "Share your referral code",
+          "subtitle": "Easy negotiation between shipper and the driver to get the right price"
+        },
+        {
+          "title": "Receive commisions",
+          "subtitle": "Choose from various vehicles for your delivery needs."
+        },
+        {
+          "title": "Withdrawal your earnings",
+          "subtitle": "Every driver is verified to ensure reliable and professional service."
+        }
+      ]
+    },
+    "requirementsSection": {
+      "title": "Requirements to become partner with Qdam",
+      "subtitle": "Submit your documents and get verified to begin delivering.",
+      "items": [
+        { "label": "Personal Identification" },
+        { "label": "Smartphone" },
+        { "label": "Age above 18" }
+      ]
+    }
+  },
+  "Company": {
+    "contactUs": {
+      "sections": [
+        {
+          "title": "Contact",
+          "lines": [
+            "Phone: +966 512345678",
+            "General enquiry: company@support.com"
+          ]
+        },
+        {
+          "title": "Whatsapp Hotline",
+          "lines": [
+            "WhatsApp Text Message only",
+            "Service Hours: Sun-Thu 9:00 AM - 6:00 PM"
+          ]
+        },
+        {
+          "title": "Location",
+          "lines": ["Phone: +966 512345678"]
+        }
       ]
     }
   }
