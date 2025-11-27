@@ -11,15 +11,15 @@ const Carrers: React.FC = () => {
         <PageHeading bigheading={true} title="Find your career at Qdam " />
       </div>
       <Container>
-        <div className="flex gap-[120px] pt-24 items-center">
-          <div className="">
+        <div className="flex justify-between  pt-24 items-center">
+          <div className="pl-[39px]">
             <img
               className="max-h-[499px] max-w-[566px] object-contain"
               src={CAREER.CAREER_AT_QDAM}
               alt=""
             />
           </div>
-          <div className="flex flex-col gap-10 max-w-[422px] mx-auto ">
+          <div className="flex flex-col gap-10 max-w-[422px]  ">
             <div className="flex flex-col gap-4">
               <h1 className="text-4xl font-bold inter-font">Career at Qdam</h1>
               <p className="text-base font-medium inter-font">
