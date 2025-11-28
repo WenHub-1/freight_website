@@ -21,7 +21,7 @@
         "english": "English",
         "arabic": "العربية"
       },
-      "download": "Download the App"
+      "download": "Download the app"
     }
   },
   "footer": {
@@ -32,7 +32,7 @@
     },
     "company": {
       "title": "COMPANY",
-      "items": ["About Us", "Careers", " Contact us"]
+      "items": ["About us", "Careers", " Contact us"]
     },
     "legal": {
       "title": "LEGAL",
@@ -67,7 +67,7 @@
       "items": [
         {
           "title": "Affordable",
-          "subtitle": "Easy negotiation between shipper and the driver to get the right price"
+          "subtitle": "Easy negotiation between shipper and the driver to get the right price."
         },
         {
           "title": "Order matching",
@@ -223,7 +223,7 @@
           "subtitle": "Choose from various vehicles for your delivery needs."
         },
         {
-          "title": "Withdrawal your earnings",
+          "title": "Withdraw your earning",
           "subtitle": "Every driver is verified to ensure reliable and professional service."
         }
       ]

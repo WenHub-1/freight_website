@@ -7,7 +7,7 @@ const AboutUs: React.FC = () => {
   return (
     <div>
       <PageHeading
-        title="About-us"
+        title="About us"
         bigheading={true}
         icon={GLOBAL_IMAGES.LOGO_QDAM2}
       />

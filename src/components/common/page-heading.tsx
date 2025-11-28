@@ -19,7 +19,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({
     <Container className="pt-[120px]">
       {bigheading ? (
         <div className="w-full h-56 flex bg-secondary rounded-[20px] justify-center items-center">
-          <div className="flex justify-center items-center">
+          <div className="flex gap-4 justify-center items-center">
             {icon && (
               <div>
                 <img

@@ -73,7 +73,7 @@ const Header: React.FC = () => {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 ) : (
-                  <li className="inline-block text-base font-medium  cursor-pointer">
+                  <li className="inline-block text-base font-medium hover:underline hover:underline-offset-8  cursor-pointer">
                     <Link to={item.link || "#"} className="  ">
                       {item.label}
                     </Link>
