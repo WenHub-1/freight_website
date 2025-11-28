@@ -9,38 +9,35 @@ const AppDownloadBanner: React.FC = () => {
 
   return (
     <Container>
-      <div className="flex justify-between">
-        <div className="bg-secondary-foreground rounded-2xl flex items-center p-12 w-[70%]">
-          <div className="flex flex-col gap-6 w-11/12">
-            <Button
-              size="lg"
-              className="flex text-base font-semibold inter-font gap-2 w-36"
-            >
-              {t("dashboard.appDownloadBanner.buttonText")}
-            </Button>
+      <div className="bg-secondary-foreground flex justify-between gap-[73px] rounded-2xl items-center  ">
+        <div className="flex flex-col p-12 gap-6  ">
+          <Button
+            size="lg"
+            className="flex text-base font-semibold inter-font gap-2 w-[30%]"
+          >
+            {t("dashboard.appDownloadBanner.buttonText")}
+          </Button>
 
-            <h1 className="text-[40px] font-semibold leading-[140%]">
-              {t("dashboard.appDownloadBanner.title")}
-            </h1>
+          <h1 className="text-[40px] font-semibold leading-[140%]">
+            {t("dashboard.appDownloadBanner.title")}
+          </h1>
 
-            <div className="flex gap-6 items-center">
-              <img
-                src={DASHBOARD_IMAGES.APP_DOWNLOAD_BANNER.APP_STORE}
-                alt="AppStore"
-                className="cursor-pointer"
-              />
-              <img
-                src={DASHBOARD_IMAGES.APP_DOWNLOAD_BANNER.GOOGLE_PLAY}
-                alt="GooglePlay"
-                className="cursor-pointer"
-              />
-            </div>
+          <div className="flex gap-6 items-center">
+            <img
+              src={DASHBOARD_IMAGES.APP_DOWNLOAD_BANNER.APP_STORE}
+              alt="AppStore"
+              className="cursor-pointer"
+            />
+            <img
+              src={DASHBOARD_IMAGES.APP_DOWNLOAD_BANNER.GOOGLE_PLAY}
+              alt="GooglePlay"
+              className="cursor-pointer"
+            />
           </div>
         </div>
-
-        <div className="w-[35%] flex justify-end">
+        <div className="flex ">
           <img
-            className="rounded-2xl w-full h-full"
+            className="rounded-2xl max-w-[528px] max-h-[519px] mx-auto  object-contain"
             src={DASHBOARD_IMAGES.APP_DOWNLOAD_BANNER.PHONE_BANNER}
             alt={t("dashboard.appDownloadBanner.title")}
           />

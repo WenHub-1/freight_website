@@ -5,7 +5,7 @@ export const GLOBAL_IMAGES = {
   LOGO_QDAM:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011348.png",
   LOGO_QDAM2:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qadaam%20Logo%20Final%20white%201.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qadaam%20Logo%20Final%20white%201.svg",
 };
 
 // ===============================
@@ -27,7 +27,7 @@ export const DASHBOARD_IMAGES = {
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011350.png",
 
   VEHICLE_SECTION:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/VehicleImg.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/vehiclessvg.svg",
 
   APP_DOWNLOAD_BANNER: {
     APP_STORE:
@@ -72,5 +72,5 @@ export const CAREER = {
   HERO_SECTION:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/image%2013.png",
   CAREER_AT_QDAM:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011344.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011344.svg",
 };
