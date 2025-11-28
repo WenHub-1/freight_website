@@ -35,7 +35,7 @@ export const DASHBOARD_IMAGES = {
     GOOGLE_PLAY:
       "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/GooglePlay.png",
     PHONE_BANNER:
-      "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/PhoneBanner.png",
+      "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011315.png",
   },
 };
 
@@ -46,7 +46,7 @@ export const FOOTER_IMAGES = {
   BACKGROUND:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/FooterBackground.png",
   HAND_PHONE:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/HandIphone.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Hand%20and%20iPhone%2016%20Pro.png",
 };
 
 // ===============================

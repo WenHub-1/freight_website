@@ -12,7 +12,7 @@
         "dropdown": [
           { "label": "About us", "link": "/about-us" },
           { "label": "Careers", "link": "/careers" },
-          { "label": "Contact", "link": "/contact-us" }
+          { "label": "Contact us", "link": "/contact-us" }
         ]
       }
     ],
@@ -94,34 +94,58 @@
       "title": "Frequently Asked Questions",
       "items": [
         {
-          "question": "What is Qdam?",
+          "question": "What services does your platform provide?",
           "answer": [
-            "Our flagship product combines cutting-edge technology with sleek design. Built with premium materials, it offers unparalleled performance and reliability."
+            "We connect customers with verified truck drivers for on-demand or scheduled goods transportation across Saudi Arabia."
           ]
         },
         {
-          "question": "How does it work?",
+          "question": "How does the booking process work?",
           "answer": [
-            "We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days."
+            "You open the app, enter pickup and drop-off locations, choose a vehicle type, negotiate rates with driver, and confirm the booking."
           ]
         },
         {
-          "question": "Frequently asked any question?",
+          "question": "What types of vehicles are available?",
           "answer": [
-            "We stand behind our products with a comprehensive 30-day return policy. If you're not completely satisfied, simply return the item in its original condition."
+            "We offer multiple truck categories including pickups, Dynas, 1-ton, 3-ton, 7-ton, and 10-ton trucks to match different cargo needs."
           ]
         },
         {
-          "question": "Payment Options",
-          "answer": ["We accept all major credit cards, PayPal, and Apple Pay."]
+          "question": "Are your drivers licensed and verified?",
+          "answer": [
+            "Yes. We verify all drivers through a complete background check, license verification, and compliance with Saudi transport regulations."
+          ]
         },
         {
-          "question": "Warranty",
-          "answer": ["Products come with a 1-year limited warranty."]
+          "question": "How do you ensure cargo safety?",
+          "answer": [
+            "We track each trip in real time but cargo security and safety is a responsibility of the driver."
+          ]
         },
         {
-          "question": "Support",
-          "answer": ["Our support team is available 24/7."]
+          "question": "How do I pay for a trip?",
+          "answer": [
+            "Currently you can pay directly to the driver using cash or online payment services like Mada or Apple Pay."
+          ]
+        },
+        {
+          "question": "Can I schedule a truck in advance?",
+          "answer": [
+            "Yes. You can schedule pickups hours or days ahead for planned shipments."
+          ]
+        },
+        {
+          "question": "What areas do you operate in?",
+          "answer": [
+            "We operate across major cities and highways in Saudi Arabia, including Riyadh, Jeddah, Dammam, and expanding nationwide."
+          ]
+        },
+        {
+          "question": "How do I contact customer support?",
+          "answer": [
+            "You can reach our support team 24/7 through the in-app chat, email, or hotline for immediate assistance."
+          ]
         }
       ]
     }
