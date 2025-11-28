@@ -13,7 +13,7 @@ const AppDownloadBanner: React.FC = () => {
         <div className="flex flex-col p-12 gap-6  ">
           <Button
             size="lg"
-            className="flex text-base font-semibold inter-font gap-2 w-36"
+            className="flex text-base font-semibold inter-font gap-2 w-[30%]"
           >
             {t("dashboard.appDownloadBanner.buttonText")}
           </Button>
