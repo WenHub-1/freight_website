@@ -72,5 +72,5 @@ export const CAREER = {
   HERO_SECTION:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/image%2013.png",
   CAREER_AT_QDAM:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011344.svg",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/NewFram.svg",
 };
