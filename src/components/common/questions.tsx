@@ -36,7 +36,7 @@ const Questions: React.FC = () => {
   return (
     <Container>
       <div className="flex justify-center">
-        <h1 className=" text-xl sm:text-4xl font-semibold mb-8">
+        <h1 className=" text-xl  sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-8">
           {faqData.title}
         </h1>
       </div>
