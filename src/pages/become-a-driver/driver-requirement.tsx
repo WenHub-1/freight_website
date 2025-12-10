@@ -11,7 +11,7 @@ import SmartphoneIcon from "@/assets/svg/smartphone";
 import AgeIcon from "@/assets/svg/user";
 
 // Import Image
-import { BECOME_DRIVER_IMAGES } from "@/components/common/constants/file-image-url";
+import { BECOME_DRIVER_IMAGES } from "@/lib/file-image-url";
 
 const DriverRequirement: React.FC = () => {
   const { t } = useTranslation();

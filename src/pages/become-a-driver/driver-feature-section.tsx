@@ -5,7 +5,7 @@ import Img1 from "@/assets/svg/clock";
 import Img2 from "@/assets/svg/priceTag";
 import Img3 from "@/assets/svg/secure-payments";
 import Img4 from "@/assets/svg/ranking";
-import { BECOME_DRIVER_IMAGES } from "@/components/common/constants/file-image-url";
+import { BECOME_DRIVER_IMAGES } from "@/lib/file-image-url";
 
 const images = [Img1, Img2, Img3, Img4];
 

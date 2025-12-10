@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeading from "@/components/common/page-heading";
-import { CAREER } from "@/components/common/constants/file-image-url";
+import { CAREER } from "@/lib/file-image-url";
 import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 

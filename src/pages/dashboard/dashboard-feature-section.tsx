@@ -5,7 +5,7 @@ import Img1 from "@/assets/svg/discount";
 import Img2 from "@/assets/svg/truck";
 import Img3 from "@/assets/svg/user-tick";
 import Img4 from "@/assets/svg/routing-2";
-import { DASHBOARD_IMAGES } from "@/components/common/constants/file-image-url";
+import { DASHBOARD_IMAGES } from "@/lib/file-image-url";
 
 const images = [Img1, Img2, Img3, Img4];
 
