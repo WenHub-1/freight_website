@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 import SnapChat from "@/assets/svg/snapChat.tsx";
 import Instagram from "@/assets/svg/instagram.tsx";
-import { GLOBAL_IMAGES } from "@/components/common/constants/file-image-url";
+import { GLOBAL_IMAGES } from "@/lib/file-image-url";
 
 // Define types for footer data
 interface FooterSection {
@@ -33,56 +33,60 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <div className="text-white relative">
+    <div className=" relative">
       <FooterTop />
 
-      <div className="bg-secondary flex items-center h-[50vh]">
-        <Container className="pb-0!">
-          <div className="flex flex-col gap-[26px]">
-            <div className="flex justify-between">
+      <div className="bg-secondary flex items-center   pt-16 pb-5 md:pb-0 md:pt-0  h-full md:h-[50vh]">
+        <Container className="text-white pb-0!">
+          <div className="flex flex-col  ">
+            <div className="flex  flex-col md:flex-row flex-wrap ">
               {/* LEFT logo + description */}
-              <div className="flex flex-col gap-6">
+              <div className="flex w-full md:w-2/5  pb-10 md:pb-0 flex-col gap-6">
                 <div>
                   <img
-                    className="max-w-[113px] max-h-[43px] object-contain"
+                    className="max-w-28 max-h-11 object-contain"
                     src={GLOBAL_IMAGES.LOGO_QDAM2}
                     alt="Qdam Logo"
                   />
                 </div>
-                <p className=" max-w-[248px]  text-sm  roboto-font">
+                <p className=" w-64 md:max-w-60 text-sm  roboto-font">
                   {footerData.description}
                 </p>
               </div>
-
-              {/* Dynamic sections */}
-              {sections.map((section, index) => (
-                <div key={index} className="flex flex-col gap-[26px]">
-                  <h1 className="text-base font-medium tracking-[3px] roboto-font leading-[18px]">
-                    {section.title}
-                  </h1>
-                  <ul className="flex flex-col gap-5">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="inter-font leading-5 text-base">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <div className="flex w-full md:w-3/5 justify-between  flex-wrap">
+                {/* Dynamic sections */}
+                {sections.map((section, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col pb-10 pr-12 md:pr-0 md:pb-0 gap-[26px]"
+                  >
+                    <h1 className="text-base font-medium tracking-[3px] roboto-font leading-[18px]">
+                      {section.title}
+                    </h1>
+                    <ul className="flex flex-col gap-5">
+                      {section.items.map((item, i) => (
+                        <li key={i} className="inter-font leading-5 text-base">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-4">
               <div className="flex gap-4">
                 <Instagram />
                 <SnapChat />
               </div>
-              <div className="flex justify-between">
+              <div className="flex md:gap-0 gap-4 flex-col-reverse md:flex-row justify-between">
                 <h2 className="roboto-font text-sm">
                   Qdam © 2025, All Rights Reserved
                 </h2>
-                <div className="flex gap-2">
+                <div className="flex pb-1 gap-2">
                   <Globe />
-                  <h1 className="font-medium text-base">
+                  <h1 className="font-medium  text-sm sm:text-base">
                     Kingdom of Saudi Arabia - English
                   </h1>
                 </div>

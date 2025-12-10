@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
 import { ArrowRight } from "lucide-react";
-import { DASHBOARD_IMAGES } from "@/components/common/constants/file-image-url";
+import { DASHBOARD_IMAGES } from "@/lib/file-image-url";
 
 const images = [
   DASHBOARD_IMAGES.BENEFITS_SECTION.BOX,
@@ -25,7 +25,9 @@ const BenefitsSection: React.FC = () => {
   return (
     <Container>
       <div className="flex flex-col gap-12">
-        <h2 className="text-center text-5xl font-semibold">{benefits.title}</h2>
+        <h2 className="text-center text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+          {benefits.title}
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {itemsWithImages.map((item, index) => (
@@ -41,8 +43,12 @@ const BenefitsSection: React.FC = () => {
                 />
               </div>
               <div className="w-[80%]">
-                <h3 className="text-[28px] font-bold">{item.title}</h3>
-                <p className="text-gray-600 text-base">{item.subtitle}</p>
+                <h3 className="text-base sm:text-xl md:text-[28px] font-bold">
+                  {item.title}
+                </h3>
+                <p className=" text-card-foreground text-xs sm:text-sm md:text-base">
+                  {item.subtitle}
+                </p>
               </div>
               <div className="absolute bottom-6 right-6">
                 <ArrowRight />

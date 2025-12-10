@@ -10,8 +10,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
-import { Globe, ChevronDown } from "lucide-react";
-import { GLOBAL_IMAGES } from "@/components/common/constants/file-image-url";
+import { Globe, ChevronDown, Menu, X } from "lucide-react";
+import { GLOBAL_IMAGES } from "@/lib/file-image-url";
 
 interface IHeaderButtons {
   language: {
@@ -20,6 +20,7 @@ interface IHeaderButtons {
   };
   download: string;
 }
+
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
   const navItems = t("header.nav", { returnObjects: true }) as NavItem[];
@@ -36,87 +37,133 @@ const Header: React.FC = () => {
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
   };
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <header className="p-4 sticky top-0 z-50 text-white h-[90px] w-full justify-center bg-secondary ">
-      <Container className="flex  justify-between">
-        {/* Left: Logo + Nav */}
-        <div className="flex gap-16  items-center ">
-          <Link to="/" className="">
-            <img
-              src={GLOBAL_IMAGES.LOGO_QDAM}
-              alt="Qadam Logo"
-              className="cursor-pointer"
-            />
-          </Link>
+    <div>
+      <header className="flex flex-col p-4 sticky top-0 z-50 h-[90px] w-full bg-secondary">
+        <Container className="flex pb-0! text-white justify-between h-full items-center">
+          {/* LEFT SIDE */}
+          <div className="flex items-center gap-6">
+            <Link to="/">
+              <img
+                src={GLOBAL_IMAGES.LOGO_QDAM}
+                alt="Qadam Logo"
+                className="cursor-pointer h-8 w-[71px] sm:w-full sm:h-full "
+              />
+            </Link>
+            {/* Desktop Nav (hidden on < lg) */}
+            <ul className="hidden lg:flex gap-7 text-base items-center">
+              {navItems.map((item, index) => (
+                <div key={index} className="relative">
+                  {item.label === "Company" ? (
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button
+                          className="bg-transparent text-base font-medium border-0 shadow-none"
+                          variant="outline"
+                        >
+                          {item.label}
+                          <ChevronDown />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-56" align="start">
+                        {item.dropdown?.map((drop, idx) => (
+                          <DropdownMenuItem key={idx}>
+                            <Link to={drop.link || "#"}>{drop.label}</Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  ) : (
+                    <li className="inline-block text-base font-medium hover:pb-1 cursor-pointer">
+                      <Link to={item.link || "#"}>{item.label}</Link>
+                    </li>
+                  )}
+                </div>
+              ))}
+            </ul>{" "}
+          </div>
 
-          <ul className="flex gap-7 text-base items-center">
-            {navItems.map((item, index) => (
-              <div key={index} className="relative">
-                {item.label === "Company" ? (
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button
-                        className="bg-transparent  text-base font-medium  border-0 shadow-none "
-                        variant="outline"
-                      >
-                        {item.label}
-                        <ChevronDown />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-56" align="start">
-                      {item.dropdown?.map((drop, idx) => (
-                        <DropdownMenuItem key={idx}>
-                          <Link to={drop.link || "#"}>{drop.label}</Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                ) : (
-                  <li className="inline-block text-base font-medium hover:pb-1 transition-all duration-  cursor-pointer">
-                    <Link to={item.link || "#"} className="  ">
-                      {item.label}
-                    </Link>
-                  </li>
+          {/* RIGHT SIDE */}
+          <div className="flex items-center   gap-3 sm:gap-6">
+            {/* Language Selector */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="bg-transparent border-0 flex items-center gap-2 text-base"
+                >
+                  <Globe size={18} />
+                  {displayLanguageLabel} <ChevronDown />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-40" align="end">
+                {currentLanguage !== "en" && (
+                  <DropdownMenuItem onClick={() => changeLanguage("en")}>
+                    {languageLabels.english}
+                  </DropdownMenuItem>
                 )}
+                {currentLanguage !== "ar" && (
+                  <DropdownMenuItem onClick={() => changeLanguage("ar")}>
+                    {languageLabels.arabic}
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            {/* Mobile Menu Icon (only visible < lg) */}
+            <button
+              className="lg:hidden hover:cursor-pointer"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+            {isMenuOpen && (
+              <div className="lg:hidden absolute top-20 left-0 w-full h-[30vh] bg-secondary z-40 p-6 flex flex-col gap-6 text-white overflow-y-auto">
+                <ul className="flex flex-col text-sm sm:text-base gap-4 font-medium">
+                  {navItems.map((item, idx) =>
+                    item.dropdown ? (
+                      item.dropdown.map((drop, dIdx) => (
+                        <li
+                          key={`${idx}-${dIdx}`}
+                          className="hover:pl-1 transition-all duration-300 ease-in-out"
+                        >
+                          <Link
+                            to={drop.link || "#"}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {drop.label}
+                          </Link>
+                        </li>
+                      ))
+                    ) : (
+                      <li
+                        key={idx}
+                        className="hover:pl-1 transition-all duration-300 ease-in-out"
+                      >
+                        <Link
+                          to={item.link || "#"}
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ),
+                  )}
+                </ul>
               </div>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex   gap-4 items-center space-x-4">
-          {/* Language drop down */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                className="bg-transparent border-0 flex items-center gap-2 text-base"
-              >
-                <Globe size={18} />
-                {displayLanguageLabel} <ChevronDown />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-40" align="end">
-              {currentLanguage !== "en" && (
-                <DropdownMenuItem onClick={() => changeLanguage("en")}>
-                  {languageLabels.english}
-                </DropdownMenuItem>
-              )}
-              {currentLanguage !== "ar" && (
-                <DropdownMenuItem onClick={() => changeLanguage("ar")}>
-                  {languageLabels.arabic}
-                </DropdownMenuItem>
-              )}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          {/* Download button */}
-          <Button variant="default" className="text-base h-12 w-44">
-            {buttons.download}
-          </Button>
-        </div>
-      </Container>
-    </header>
+            )}
+            <Button
+              variant="default"
+              className="text-base h-12 w-44 hidden lg:block"
+            >
+              {buttons.download}
+            </Button>
+          </div>
+        </Container>
+        {/* BURGER MENU */}
+      </header>
+    </div>
   );
 };
 

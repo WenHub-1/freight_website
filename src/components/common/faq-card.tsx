@@ -19,10 +19,10 @@ const FaqCard: React.FC<FaqCardProps> = ({ faq, isOpen, value }) => {
   return (
     <AccordionItem
       value={value}
-      className="rounded-2xl border border-border/40 bg-white px-6 py-4 shadow-sm transition-shadow hover:shadow-md"
+      className="rounded-2xl border border-border/40 bg-white px-6 pt-2 sm:pt-4 shadow-sm transition-shadow hover:shadow-md"
     >
       <AccordionTrigger className="flex w-full items-start justify-between gap-4 text-left">
-        <h2 className="dm-sans-font text-xl font-medium leading-7">
+        <h2 className="dm-sans-font text-sm sm:text-xl font-medium leading-7">
           {faq.question}
         </h2>
 
@@ -37,7 +37,7 @@ const FaqCard: React.FC<FaqCardProps> = ({ faq, isOpen, value }) => {
         </span>
       </AccordionTrigger>
 
-      <AccordionContent className="px-1 text-base transition-all duration-300 ease-in-out">
+      <AccordionContent className="px-1 text-xs sm:text-base transition-all duration-300 ease-in-out">
         <div className="flex flex-col gap-3 pt-2">
           {faq.answer.map((ans, i) => (
             <p key={i} className="dm-sans-font leading-7 text-muted-foreground">
