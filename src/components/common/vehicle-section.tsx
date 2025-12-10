@@ -1,15 +1,15 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
-import { DASHBOARD_IMAGES } from "./constants/file-image-url";
+import { DASHBOARD_IMAGES } from "@/lib/file-image-url";
 
 const VehicleSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <Container>
-      <div className="flex flex-col gap-12 justify-center items-center rounded-lg text-center">
-        <h1 className="text-5xl font-semibold">
+      <div className="flex flex-col gap-4 sm:gap-8 md:gap-12 justify-center items-center rounded-lg text-center">
+        <h1 className=" text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
           {t("dashboard.vehicleSection.title")}
         </h1>
         <div className="w-full">

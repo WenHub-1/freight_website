@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeading from "@/components/common/page-heading";
-import { GLOBAL_IMAGES } from "@/components/common/constants/file-image-url";
+import { GLOBAL_IMAGES } from "@/lib/file-image-url";
 import Container from "@/components/ui/container";
 
 const AboutUs: React.FC = () => {
