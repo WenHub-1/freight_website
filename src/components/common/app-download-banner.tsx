@@ -10,7 +10,7 @@ const AppDownloadBanner: React.FC = () => {
   return (
     <Container>
       <div className="bg-secondary-foreground flex  rounded-2xl items-center  ">
-        <div className="flex flex-col p-5 sm:p-8 md:p-12 gap-2 sm:gap-4 md:gap-6  ">
+        <div className="flex flex-col pl-5 pt-5 pr-5 sm:pl-8 md:pl-12 gap-2 sm:gap-4 md:gap-6  ">
           <Button
             size="lg"
             className="flex rounded-[3px] md:rounded-lg text-xs sm:text-base  font-semibold inter-font gap-2 w-24 h-7 sm:w-36 sm:h-10"

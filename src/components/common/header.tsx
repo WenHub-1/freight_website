@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
-                          className="bg-transparent text-base font-medium border-0 shadow-none"
+                          className="bg-transparent w-24 text-base font-medium border-0 shadow-none"
                           variant="outline"
                         >
                           {item.label}

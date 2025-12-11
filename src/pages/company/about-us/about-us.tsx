@@ -14,18 +14,18 @@ const AboutUs: React.FC = () => {
       <Container>
         <div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <h1 className="text-4xl font-bold inter-font">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold inter-font">
               Trucking Made Simple
             </h1>
-            <div className="flex flex-col text-base text-center font-medium inter-font gap-12 justify-center items-center">
-              <p className="max-w-[67%]">
+            <div className="flex flex-col text-sm md:text-base text-center font-medium inter-font gap-6 sm:gap-8 md:gap-10 lg:gap-12 justify-center items-center">
+              <p className="md:max-w-[67%]">
                 Founded in Saudi Arabia in 2025, Qdam is an on-demand delivery
                 platform built to empower communities by making logistics fast,
                 simple, and affordable. With just a click, individuals, small
                 businesses, and enterprises can access a wide fleet of delivery
                 vehicles operated by professional driver partners.
               </p>
-              <p className="max-w-2/4">
+              <p className="md:max-w-2/4">
                 Driven by technology, we connect people, vehicles, and goods to
                 move what matters and support local communities.
               </p>

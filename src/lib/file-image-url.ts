@@ -54,7 +54,7 @@ export const FOOTER_IMAGES = {
 // ===============================
 export const SHIP_WITH_US_IMAGES = {
   FEATURE_SECTION_BOX:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/BeniefitsSectionBox.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Group%201171275214.svg",
 };
 
 // ===============================
@@ -66,6 +66,10 @@ export const BECOME_DRIVER_IMAGES = {
 
   REQUIREMENT_LIST:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/requirement-list.png",
+};
+export const PARTNERS_IMAGES = {
+  FEATURE_SECTION:
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%2010000112983.svg",
 };
 
 export const CAREER = {
