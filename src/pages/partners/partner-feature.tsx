@@ -1,5 +1,5 @@
 import React from "react";
-import PartnersPhone from "@/assets/svg/partners-phone";
+import { PARTNERS_IMAGES } from "@/lib/file-image-url";
 import FeatureSection from "@/components/common/feature-section";
 import RecieveCommisionsIcon from "@/assets/svg/recieve-commisions";
 import { useTranslation } from "react-i18next";
@@ -24,7 +24,7 @@ const PartnerFeature: React.FC = () => {
       <FeatureSection
         title={section.title}
         items={itemsWithImages}
-        mainImage={<PartnersPhone />} // or another main image for the section
+        mainImage={PARTNERS_IMAGES.FEATURE_SECTION}
         bgImageStyle={true}
       />
     </div>

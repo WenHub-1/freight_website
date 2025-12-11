@@ -10,7 +10,7 @@ interface FeatureItem {
 interface FeatureSectionProps {
   title: string;
   items: FeatureItem[];
-  mainImage?: string | React.ReactNode;
+  mainImage?: string;
   bgImageStyle?: boolean;
 }
 
@@ -25,16 +25,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
       <div className="flex justify-center flex-wrap gap-4 md:gap-10 lg:gap-0 sm:justify-center lg:justify-between lg:px-7 items-center  ">
         {mainImage &&
           (bgImageStyle ? (
-            <div className="p-4  mx-auto flex justify-center items-center rounded-2xl shadow-sm">
-              {typeof mainImage === "string" ? (
-                <div>
-                  <img src={mainImage} alt="" className="w-full h-full " />
-                </div>
-              ) : (
-                <div className="w-[358px] h-[337px] flex justify-center items-center">
-                  {mainImage}
-                </div>
-              )}
+            <div className=" w-[358px] h-64 md:w-[420px] md:h-[350px] lg:w-[450px] lg:h-[450px] xl:w-[557px] xl:h-[527px]     mx-auto flex justify-center items-center rounded-2xl shadow-sm">
+              <div className="h-60 w-[186px] md:h-64 md:w-72 lg:h-72 lg:sm:w-[375px] ">
+                <img src={mainImage} alt="" className="w-full h-full  " />
+              </div>
             </div>
           ) : (
             <div className="flex justify-center items-center ">
@@ -43,19 +37,19 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                   <img
                     src={mainImage}
                     alt=""
-                    className=" h-[350px] w-[350px]  lg:w-full lg:h-full  "
+                    className=" h-[350px] w-[350px] lg:w-[500px] lg:h-full  xl:w-full xl:h-full  "
                   />
                 </div>
               )}
             </div>
           ))}
 
-        <div className="flex flex-col gap-4 sm:gap-6">
+        <div className="flex flex-col gap-4 lg:gap-6">
           <h2 className="text-xl   sm:text-2xl md:text-3xl  lg:text-4xl font-semibold leading-[120%] text-primary">
             {title}
           </h2>
 
-          <div className="flex flex-col gap-4 md:gap-7 lg:gap-11 max-w-[400px]">
+          <div className="flex flex-col gap-4 md:gap-7 lg:gap-9 xl:gap-11  max-w-[400px]">
             {items.map((item, index) => (
               <div key={index} className="flex flex-row gap-6 items-start">
                 <div className="pt-1.5">

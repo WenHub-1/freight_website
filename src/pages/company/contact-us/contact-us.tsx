@@ -25,7 +25,7 @@ const ContactUs: React.FC = () => {
       <PageHeading bigheading={true} title="Contact us" />
 
       <Container>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col gap-10 lg:gap-0 lg:flex-row">
           {sections.map((section, index) => {
             const Icon = icons[index];
 
@@ -34,19 +34,26 @@ const ContactUs: React.FC = () => {
                 key={index}
                 className="flex flex-col inter-font gap-10 items-center"
               >
-                <div className="flex flex-col gap-3 items-center">
+                <div className="flex flex-col  gap-3 items-center">
                   <Icon />
-                  <h1 className="text-4xl font-bold">{section.title}</h1>
+                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
+                    {section.title}
+                  </h1>
 
                   {section.lines.map((line, i) => (
-                    <p key={i} className="text-base">
+                    <p key={i} className="text-sm md:text-base">
                       {line}
                     </p>
                   ))}
                 </div>
                 {/* Add button below second div (index 1) */}
                 {index === 1 && (
-                  <Button variant="primary-shadow">WhatsApp now</Button>
+                  <Button
+                    variant="primary-shadow"
+                    className=" h-14  w-52 roboto-font text-lg "
+                  >
+                    WhatsApp now
+                  </Button>
                 )}
               </div>
             );
