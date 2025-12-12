@@ -19,7 +19,7 @@ const Carrers: React.FC = () => {
         />
       </div>
       <Container>
-        <div className="flex justify-center lg:justify-between flex-wrap gap-5 lg:gap-0  pt-24 items-center">
+        <div className="flex justify-center lg:justify-between flex-wrap gap-5 lg:gap-0  pt-10 sm:pt-12 md:pt-16 lg:pt-24 items-center">
           <div className="pl-0 lg:pl-[39px]">
             <img
               className="  w-[358px] h-[336px] md:h-[400px] md:w-[450px]  lg:h-[450px] lg:w-[510px] xl:h-[499px] xl:w-[566px] object-contain"

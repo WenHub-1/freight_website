@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 
   return (
     <div>
-      <header className="flex flex-col p-4 sticky top-0 z-50 h-[90px] w-full bg-secondary">
+      <header className="flex flex-col p-4 sticky top-0 z-50 h-[60px] sm:h-20 md::h-[90px] w-full bg-secondary">
         <Container className="flex pb-0! text-white justify-between h-full items-center">
           {/* LEFT SIDE */}
           <div className="flex items-center gap-6">
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="outline"
-                  className="bg-transparent border-0 flex items-center gap-2 text-base"
+                  className="bg-transparent border-0 flex items-center gap-2 text-sm md:text-base"
                 >
                   <Globe size={18} />
                   {displayLanguageLabel} <ChevronDown />
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
             {isMenuOpen && (
-              <div className="lg:hidden absolute top-20 left-0 w-full h-[30vh] bg-secondary z-40 p-6 flex flex-col gap-6 text-white overflow-y-auto">
+              <div className="lg:hidden absolute top-14 sm:top-20 left-0 w-full h-[30vh] bg-secondary z-40 p-6 flex flex-col gap-6 text-white overflow-y-auto">
                 <ul className="flex flex-col text-sm sm:text-base gap-4 font-medium">
                   {navItems.map((item, idx) =>
                     item.dropdown ? (
