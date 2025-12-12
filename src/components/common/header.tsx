@@ -119,7 +119,7 @@ const Header: React.FC = () => {
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
             {isMenuOpen && (
-              <div className="lg:hidden absolute top-20 left-0 w-full h-[30vh] bg-secondary z-40 p-6 flex flex-col gap-6 text-white overflow-y-auto">
+              <div className="lg:hidden absolute top-14 sm:top-20 left-0 w-full h-[30vh] bg-secondary z-40 p-6 flex flex-col gap-6 text-white overflow-y-auto">
                 <ul className="flex flex-col text-sm sm:text-base gap-4 font-medium">
                   {navItems.map((item, idx) =>
                     item.dropdown ? (
