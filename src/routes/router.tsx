@@ -14,6 +14,7 @@ const ContactUs = lazy(
 );
 const AboutUs = lazy(() => import("../pages/company/about-us/about-us.tsx"));
 const Careers = lazy(() => import("../pages/company/careers/careers.tsx"));
+const Download = lazy(() => import("../pages/download"));
 
 const BecomeADriver = lazy(
   () => import("../pages/become-a-driver/become-a-driver.tsx"),
@@ -60,6 +61,10 @@ const appRoutes = createBrowserRouter([
       {
         path: APP_ROUTES.careers,
         element: <Careers />,
+      },
+      {
+        path: APP_ROUTES.download,
+        element: <Download />,
       },
     ],
   },

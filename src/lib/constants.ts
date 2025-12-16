@@ -10,4 +10,5 @@ export const APP_ROUTES = {
   contactUs: "/contact-us",
   aboutUs: "/about-us",
   careers: "/careers",
+  download: "/download",
 };

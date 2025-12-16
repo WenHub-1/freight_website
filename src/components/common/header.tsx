@@ -41,7 +41,7 @@ const Header: React.FC = () => {
 
   return (
     <div>
-      <header className="flex flex-col p-4 sticky top-0 z-50 h-[60px] sm:h-20 md::h-[90px] w-full bg-secondary">
+      <header className="flex flex-col p-4 sticky top-0 z-50 h-[60px] sm:h-20 md:h-[90px] w-full bg-secondary">
         <Container className="flex pb-0! text-white justify-between h-full items-center">
           {/* LEFT SIDE */}
           <div className="flex items-center gap-6">
