@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Container from "../ui/container";
 import FooterTop from "./footer-top.tsx";
 import { useTranslation } from "react-i18next";
@@ -6,6 +7,7 @@ import { Globe } from "lucide-react";
 import SnapChat from "@/assets/svg/snapChat.tsx";
 import Instagram from "@/assets/svg/instagram.tsx";
 import { GLOBAL_IMAGES } from "@/lib/file-image-url";
+import { APP_ROUTES } from "@/lib/constants";
 
 // Define types for footer data
 interface FooterSection {
@@ -19,6 +21,34 @@ interface FooterData {
   company: FooterSection;
   legal: FooterSection;
 }
+
+// Map footer items to their routes based on section and item text
+const getItemRoute = (sectionTitle: string, item: string): string | null => {
+  const trimmedItem = item.trim();
+
+  // Service section routes
+  if (sectionTitle === "SERVICE" || sectionTitle === "الخدمات") {
+    if (trimmedItem === "Ship with us" || trimmedItem === "الشحن معنا")
+      return APP_ROUTES.shipWithUs;
+    if (trimmedItem === "Become a driver" || trimmedItem === "انضم كسائق")
+      return APP_ROUTES.becomeADriver;
+    if (trimmedItem === "Partner & earn" || trimmedItem === "شارك واربح")
+      return APP_ROUTES.partners;
+  }
+
+  // Company section routes
+  if (sectionTitle === "COMPANY" || sectionTitle === "الشركة") {
+    if (trimmedItem === "About us" || trimmedItem === "من نحن")
+      return APP_ROUTES.aboutUs;
+    if (trimmedItem === "Careers" || trimmedItem === "الوظائف")
+      return APP_ROUTES.careers;
+    if (trimmedItem === "Contact us" || trimmedItem === "تواصل معنا")
+      return APP_ROUTES.contactUs;
+  }
+
+  // Legal section items don't have routes yet
+  return null;
+};
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -64,11 +94,30 @@ const Footer: React.FC = () => {
                       {section.title}
                     </h1>
                     <ul className="flex flex-col gap-5">
-                      {section.items.map((item, i) => (
-                        <li key={i} className="inter-font leading-5 text-base">
-                          {item}
-                        </li>
-                      ))}
+                      {section.items.map((item, i) => {
+                        const route = getItemRoute(section.title, item);
+                        const itemContent = item.trim();
+
+                        return (
+                          <li
+                            key={i}
+                            className="inter-font leading-5 text-base"
+                          >
+                            {route ? (
+                              <Link
+                                to={route}
+                                className="transition-colors hover:text-primary"
+                              >
+                                {itemContent}
+                              </Link>
+                            ) : (
+                              <span className="cursor-default">
+                                {itemContent}
+                              </span>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 ))}
