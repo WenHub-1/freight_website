@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { Globe } from "lucide-react";
 import SnapChat from "@/assets/svg/snapChat.tsx";
 import Instagram from "@/assets/svg/instagram.tsx";
-import { GLOBAL_IMAGES } from "@/lib/file-image-url";
 import { APP_ROUTES } from "@/lib/constants";
+import Logo from "@/assets/svg/logo.tsx";
 
 // Define types for footer data
 interface FooterSection {
@@ -97,12 +97,8 @@ const Footer: React.FC = () => {
             <div className="flex  flex-col md:flex-row flex-wrap ">
               {/* LEFT logo + description */}
               <div className="flex w-full md:w-2/5  pb-10 md:pb-0 flex-col gap-6">
-                <div>
-                  <img
-                    className="max-w-28 max-h-11 object-contain"
-                    src={GLOBAL_IMAGES.LOGO_QDAM2}
-                    alt="Qdam Logo"
-                  />
+                <div className="flex items-start h-full min-w-[120px] sm:min-w-[140px] md:min-w-[160px]">
+                  <Logo className="h-auto max-h-[50px] sm:max-h-[60px] md:max-h-[100px]" />
                 </div>
                 <p className=" w-64 md:max-w-60 text-sm  roboto-font">
                   {footerData.description}

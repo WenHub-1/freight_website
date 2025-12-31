@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
-import { GLOBAL_IMAGES } from "@/lib/file-image-url";
+import Logo from "@/assets/svg/logo";
 
 interface IHeaderButtons {
   language: {
@@ -45,12 +45,11 @@ const Header: React.FC = () => {
         <Container className="flex pb-0! text-white justify-between h-full items-center">
           {/* LEFT SIDE */}
           <div className="flex items-center gap-6">
-            <Link to="/">
-              <img
-                src={GLOBAL_IMAGES.LOGO_QDAM}
-                alt="Qadam Logo"
-                className="cursor-pointer h-8 w-[71px] sm:w-full sm:h-full "
-              />
+            <Link
+              to="/"
+              className="flex items-center h-full min-w-[120px] sm:min-w-[140px] md:min-w-[160px]"
+            >
+              <Logo className="w-full h-auto max-h-[50px] sm:max-h-[60px] md:max-h-[70px]" />
             </Link>
             {/* Desktop Nav (hidden on < lg) */}
             <ul className="hidden lg:flex gap-7 text-base items-center">

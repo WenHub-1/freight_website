@@ -3,7 +3,7 @@
 // ===============================
 export const GLOBAL_IMAGES = {
   LOGO_QDAM:
-    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Frame%201000011348.png",
+    "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qidaam%20Logo%20Final%20PNG.png",
   LOGO_QDAM2:
     "https://zmsveyjhpbvqhglqhluu.supabase.co/storage/v1/object/public/dev-website/images/Qadaam%20Logo%20Final%20white%201.svg",
 };
