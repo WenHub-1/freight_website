@@ -13,7 +13,7 @@ const AppDownloadBanner: React.FC = () => {
         <div className="flex flex-col pl-5 pt-5 pr-5 sm:pl-8 md:pl-12 gap-2 sm:gap-4 md:gap-6  ">
           <Button
             size="lg"
-            className="flex rounded-[3px] md:rounded-lg text-xs sm:text-base  font-semibold inter-font gap-2 w-24 h-7 sm:w-36 sm:h-10"
+            className="hide-download-button flex rounded-[3px] md:rounded-lg text-xs sm:text-base  font-semibold inter-font gap-2 w-24 h-7 sm:w-36 sm:h-10"
           >
             {t("dashboard.appDownloadBanner.buttonText")}
           </Button>
@@ -22,7 +22,7 @@ const AppDownloadBanner: React.FC = () => {
             {t("dashboard.appDownloadBanner.title")}
           </h1>
 
-          <div className="flex gap-2 sm:gap-6 items-center">
+          <div className="flex gap-2 sm:gap-6 items-center hide-download-button">
             <img
               src={DASHBOARD_IMAGES.APP_DOWNLOAD_BANNER.APP_STORE}
               alt="AppStore"

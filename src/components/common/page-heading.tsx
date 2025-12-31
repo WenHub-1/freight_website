@@ -43,7 +43,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({
             {button && (
               <Button
                 variant="primary-shadow"
-                className=" w-28 sm:w-36 md:w-44 h-8 sm:h-9 md:h-11 lg:h-14  lg:w-52 font-medium  text-[10px] sm:text-xs md:text-base lg:text-lg"
+                className="hide-download-button w-28 sm:w-36 md:w-44 h-8 sm:h-9 md:h-11 lg:h-14  lg:w-52 font-medium  text-[10px] sm:text-xs md:text-base lg:text-lg"
               >
                 Download the app
               </Button>

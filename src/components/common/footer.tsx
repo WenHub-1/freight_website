@@ -50,11 +50,36 @@ const getItemRoute = (sectionTitle: string, item: string): string | null => {
   return null;
 };
 
+// Check if item is Terms & Conditions and get PDF path
+const getTermsAndConditionsPdf = (
+  sectionTitle: string,
+  item: string,
+  currentLanguage: string,
+): string | null => {
+  const trimmedItem = item.trim();
+
+  // Check if it's in the legal section and is Terms & Conditions
+  if (sectionTitle === "LEGAL" || sectionTitle === "القانوني") {
+    if (
+      trimmedItem === "Terms & Conditions" ||
+      trimmedItem === "الشروط والأحكام"
+    ) {
+      // Return PDF path based on current language
+      return currentLanguage === "ar"
+        ? "/documents/Terms and Conditions Arabic.pdf"
+        : "/documents/Terms and Conditions.pdf";
+    }
+  }
+
+  return null;
+};
+
 const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   // Type the translation result
   const footerData = t("footer", { returnObjects: true }) as FooterData;
+  const currentLanguage = i18n.language;
 
   const sections: FooterSection[] = [
     footerData.service,
@@ -96,6 +121,11 @@ const Footer: React.FC = () => {
                     <ul className="flex flex-col gap-5">
                       {section.items.map((item, i) => {
                         const route = getItemRoute(section.title, item);
+                        const pdfPath = getTermsAndConditionsPdf(
+                          section.title,
+                          item,
+                          currentLanguage,
+                        );
                         const itemContent = item.trim();
 
                         return (
@@ -110,6 +140,15 @@ const Footer: React.FC = () => {
                               >
                                 {itemContent}
                               </Link>
+                            ) : pdfPath ? (
+                              <a
+                                href={pdfPath}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="transition-colors hover:text-primary cursor-pointer"
+                              >
+                                {itemContent}
+                              </a>
                             ) : (
                               <span className="cursor-default">
                                 {itemContent}

@@ -26,6 +26,12 @@
   },
   "footer": {
     "description": "Qdam is Empowering businesses and drivers with seamless delivery solutions.",
+    "footerTop": {
+      "heading": "Get started with QDAM",
+      "paragraph": "Join us as a delivery driver or partner and start earning right now!",
+      "buttonText": "Download the app",
+      "buttonTextShort": "Download app"
+    },
     "service": {
       "title": "SERVICE",
       "items": ["Ship with us", "Become a driver", "Partner & earn"]
@@ -211,6 +217,7 @@
     }
   },
   "partners": {
+    "title": "Share and earn",
     "featureSection": {
       "title": "Become partner and earn",
       "items": [
@@ -239,13 +246,28 @@
     }
   },
   "Company": {
+    "title": "Contact us",
+    "aboutUs": {
+      "title": "About us",
+      "heading": "Trucking Made Simple",
+      "paragraph1": "Founded in Saudi Arabia in 2025, Qdam is an on-demand delivery platform built to empower communities by making logistics fast, simple, and affordable. With just a click, individuals, small businesses, and enterprises can access a wide fleet of delivery vehicles operated by professional driver partners.",
+      "paragraph2": "Driven by technology, we connect people, vehicles, and goods to move what matters and support local communities."
+    },
+    "careers": {
+      "title": "Find your career at Qdam",
+      "heading": "Career at Qdam",
+      "paragraph": "Qdam is redefining on-demand delivery through technology, empowering users to send and receive with speed and confidence.",
+      "buttonText": "Contact us for jobs"
+    },
     "contactUs": {
+      "buttonText": "WhatsApp now",
+      "whatsappNumber": "+966564444538",
       "sections": [
         {
           "title": "Contact",
           "lines": [
-            "Phone: +966 512345678",
-            "General enquiry: company@support.com"
+            "Phone: +966 56 444 4538",
+            "General enquiry: contact@qaddam-wasal.com"
           ]
         },
         {
@@ -257,7 +279,7 @@
         },
         {
           "title": "Location",
-          "lines": ["Phone: +966 512345678"]
+          "lines": ["Phone: +966 56 444 4538"]
         }
       ]
     }

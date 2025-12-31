@@ -17,12 +17,23 @@ const ContactUs: React.FC = () => {
     lines: string[];
   }[];
 
+  // Get WhatsApp number from translation
+  const whatsappNumber = t("Company.contactUs.whatsappNumber");
+
   // Icon array (same order as translation)
   const icons = [Message, WhatsApp, Location];
 
+  // Handle WhatsApp button click
+  const handleWhatsAppClick = () => {
+    // Remove + and spaces from phone number for WhatsApp URL
+    const cleanNumber = whatsappNumber.replace(/[\s+]/g, "");
+    const whatsappUrl = `https://wa.me/${cleanNumber}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div>
-      <PageHeading bigheading={true} title="Contact us" />
+      <PageHeading bigheading={true} title={t("Company.title")} />
 
       <Container>
         <div className="flex justify-between flex-col gap-10 lg:gap-0 lg:flex-row">
@@ -51,8 +62,9 @@ const ContactUs: React.FC = () => {
                   <Button
                     variant="primary-shadow"
                     className=" h-14  w-52 roboto-font text-lg "
+                    onClick={handleWhatsAppClick}
                   >
-                    WhatsApp now
+                    {t("Company.contactUs.buttonText")}
                   </Button>
                 )}
               </div>

@@ -20,7 +20,7 @@ const Download: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             {/* Google Play */}
             <Button
-              className="h-14 px-6 text-base flex gap-2"
+              className="hide-download-button h-14 px-6 text-base flex gap-2"
               onClick={() => window.open("https://play.google.com", "_blank")}
             >
               <DownloadIcon size={20} />
@@ -30,7 +30,7 @@ const Download: React.FC = () => {
             {/* App Store */}
             <Button
               variant="outline"
-              className="h-14 px-6 text-base flex gap-2"
+              className="hide-download-button h-14 px-6 text-base flex gap-2"
               onClick={() =>
                 window.open("https://www.apple.com/app-store/", "_blank")
               }

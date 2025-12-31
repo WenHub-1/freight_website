@@ -56,7 +56,7 @@ const Header: React.FC = () => {
             <ul className="hidden lg:flex gap-7 text-base items-center">
               {navItems.map((item, index) => (
                 <div key={index} className="relative">
-                  {item.label === "Company" ? (
+                  {item.dropdown ? (
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
@@ -69,9 +69,11 @@ const Header: React.FC = () => {
                       </DropdownMenuTrigger>
                       <DropdownMenuContent className="w-56" align="start">
                         {item.dropdown?.map((drop, idx) => (
-                          <DropdownMenuItem key={idx}>
-                            <Link to={drop.link || "#"}>{drop.label}</Link>
-                          </DropdownMenuItem>
+                          <Link to={drop.link || "#"}>
+                            <DropdownMenuItem key={idx}>
+                              {drop.label}
+                            </DropdownMenuItem>
+                          </Link>
                         ))}
                       </DropdownMenuContent>
                     </DropdownMenu>
@@ -155,7 +157,7 @@ const Header: React.FC = () => {
             )}
             <Button
               variant="default"
-              className="text-base h-12 w-44 hidden lg:block"
+              className="hide-download-button text-base h-12 w-44 hidden lg:block"
             >
               {buttons.download}
             </Button>

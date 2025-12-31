@@ -1,14 +1,27 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import PageHeading from "@/components/common/page-heading";
 import { CAREER } from "@/lib/file-image-url";
 import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { APP_ROUTES } from "@/lib";
+import { useNavigate } from "react-router-dom";
 
 const Carrers: React.FC = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const careers = t("Company.careers", { returnObjects: true }) as {
+    title: string;
+    heading: string;
+    paragraph: string;
+    buttonText: string;
+  };
+
   return (
     <div className="relative">
       <div className="z-20">
-        <PageHeading bigheading={true} title="Find your career at Qdam " />
+        <PageHeading bigheading={true} title={careers.title} />
       </div>
       <div className="absolute top-0 w-full -z-10">
         {" "}
@@ -30,15 +43,20 @@ const Carrers: React.FC = () => {
           <div className="flex flex-col items-center lg:items-start gap-6  md:gap-8 lg:gap-10 max-w-[422px]  ">
             <div className="flex flex-col gap-4">
               <h1 className="flex justify-center lg:justify-start text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold inter-font">
-                Career at Qdam
+                {careers.heading}
               </h1>
               <p className="flex text-center lg:text-start  text-sm md:text-base font-medium inter-font">
-                Qdam is redefining on-demand delivery through technology,
-                empowering users to send and receive with speed and confidence.
+                {careers.paragraph}
               </p>
             </div>
-            <Button className=" h-14 w-52" variant="primary-shadow">
-              Contact us for jobs
+            <Button
+              className=" h-14 w-52"
+              variant="primary-shadow"
+              onClick={() => {
+                navigate(APP_ROUTES.contactUs);
+              }}
+            >
+              {careers.buttonText}
             </Button>
           </div>
         </div>

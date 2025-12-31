@@ -5,11 +5,13 @@ import PartnerFeature from "./partner-feature";
 import PartnerRequirement from "./partner-requirement";
 import AppDownloadBanner from "@/components/common/app-download-banner";
 import Questions from "@/components/common/questions";
+import { useTranslation } from "react-i18next";
 
 const Partners: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <Container>
-      <PageHeading title="Share and earn" button={true} />
+      <PageHeading title={t("partners.title")} button={true} />
       <PartnerFeature />
       <PartnerRequirement />
       <AppDownloadBanner />

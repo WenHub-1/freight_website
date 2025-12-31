@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
             <p className="text-xs sm:text-base md:text-xl lg:text-2xl inter-font font-medium sm:font-normal max-w-[400px]">
               {hero.subtitle}
             </p>
-            <Button className=" h-7  w-32 sm:w-1/2 sm:h-10 md:h-14 text-xs  sm:text-base md:text-lg font-medium roboto-font ">
+            <Button className="hide-download-button h-7  w-32 sm:w-1/2 sm:h-10 md:h-14 text-xs  sm:text-base md:text-lg font-medium roboto-font ">
               {hero.buttonText}
             </Button>
           </div>
