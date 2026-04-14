@@ -11,4 +11,6 @@ export const APP_ROUTES = {
   aboutUs: "/about-us",
   careers: "/careers",
   download: "/download",
+  privacyPolicy: "/privacy-policy",
+  termConditions: "/terms-conditions",
 };
