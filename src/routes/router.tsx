@@ -3,7 +3,6 @@ import { createBrowserRouter } from "react-router-dom";
 import { APP_ROUTES } from "../lib";
 import ErrorElement from "../components/common/error-element";
 import MainLayout from "../components/layouts/main-layout";
-
 const Dashboard = lazy(() => import("../pages/dashboard/dashboard"));
 const Login = lazy(() => import("../pages/login"));
 const Theme = lazy(() => import("../pages/theme"));
@@ -15,6 +14,12 @@ const ContactUs = lazy(
 const AboutUs = lazy(() => import("../pages/company/about-us/about-us.tsx"));
 const Careers = lazy(() => import("../pages/company/careers/careers.tsx"));
 const Download = lazy(() => import("../pages/download"));
+const PrivacyPolicy = lazy(
+  () => import("@/pages/privacy-policy/privacy-policy.tsx"),
+);
+const TermsConditions = lazy(
+  () => import("../pages/term-conditions.ts/term-contitions.tsx"),
+);
 
 const BecomeADriver = lazy(
   () => import("../pages/become-a-driver/become-a-driver.tsx"),
@@ -61,6 +66,14 @@ const appRoutes = createBrowserRouter([
       {
         path: APP_ROUTES.careers,
         element: <Careers />,
+      },
+      {
+        path: APP_ROUTES.privacyPolicy,
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: APP_ROUTES.termConditions,
+        element: <TermsConditions />,
       },
       {
         path: APP_ROUTES.download,

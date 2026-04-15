@@ -46,7 +46,17 @@ const getItemRoute = (sectionTitle: string, item: string): string | null => {
       return APP_ROUTES.contactUs;
   }
 
-  // Legal section items don't have routes yet
+  // Legal section routes
+  if (sectionTitle === "LEGAL" || sectionTitle === "القانوني") {
+    if (trimmedItem === "Privacy Policy" || trimmedItem === "سياسة الخصوصية")
+      return APP_ROUTES.privacyPolicy;
+    if (
+      trimmedItem === "Terms & Conditions" ||
+      trimmedItem === "سياسة الخصوصية"
+    )
+      return APP_ROUTES.termConditions;
+  }
+
   return null;
 };
 
@@ -97,7 +107,7 @@ const Footer: React.FC = () => {
             <div className="flex  flex-col md:flex-row flex-wrap ">
               {/* LEFT logo + description */}
               <div className="flex w-full md:w-2/5  pb-10 md:pb-0 flex-col gap-6">
-                <div className="flex items-start h-full min-w-[120px] sm:min-w-[140px] md:min-w-[160px]">
+                <div className="flex items-start h-full min-w-[120px] sm:min-w-[140px] md:min-w-40">
                   <Logo className="h-auto max-h-[50px] sm:max-h-[60px] md:max-h-[100px]" />
                 </div>
                 <p className=" w-64 md:max-w-60 text-sm  roboto-font">

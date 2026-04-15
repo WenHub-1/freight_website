@@ -42,7 +42,7 @@
     },
     "legal": {
       "title": "LEGAL",
-      "items": ["Privacy Policy", "Terms & Conditions", "Cookie Policy"]
+      "items": ["Privacy Policy", "Terms & Conditions"]
     }
   },
   "dashboard": {
