@@ -14,7 +14,7 @@ const FooterTop: React.FC = () => {
   };
 
   return (
-    <div className="flex h-[30vh] relative justify-center ">
+    <div className="flex h-40 sm:h-[180px] md:h-[200px] relative justify-center">
       <div className="absolute -bottom-8 md:-bottom-14  ">
         <div
           className="relative  min-w-[358px] min-h-64 sm:h-full sm:min-w-[600px]   md:min-w-[700px]  lg:h-full lg:w-full  flex lg:items-center text-white rounded-2xl bg-no-repeat bg-cover bg-center"

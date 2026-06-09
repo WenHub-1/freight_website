@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
     <div className=" relative">
       <FooterTop />
 
-      <div className="bg-secondary flex items-center   pt-16 pb-5 md:pb-0 md:pt-0  h-full md:h-[50vh]">
+      <div className="bg-secondary flex items-center pt-36 sm:pt-40 md:pt-24 pb-5 md:pb-8 h-full">
         <Container className="text-white pb-0!">
           <div className="flex flex-col  ">
             <div className="flex  flex-col md:flex-row flex-wrap ">
