@@ -1,43 +1,77 @@
 import React from "react";
 import PageHeading from "@/components/common/page-heading";
-import { DownloadIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import AppStore from "@/assets/images/AppStore.png";
+import GooglePlay from "@/assets/images/GooglePlay.png";
+import QRCode from "@/assets/images/QR-code.png";
+
 const Download: React.FC = () => {
   return (
     <div>
-      <PageHeading bigheading={true} title="Download Page" />
-      <div className="min-h-[40vh] w-full flex items-center justify-center px-4">
-        <div className="max-w-2xl w-full text-center space-y-6">
-          <h1 className="text-3xl md:text-5xl font-bold">
-            How to download the Qadam app?
-          </h1>
+      <PageHeading bigheading={true} title="Download App" />
+      <div className="min-h-[60vh] w-full flex items-center justify-center px-4 py-16">
+        <div className="max-w-4xl w-full flex flex-col items-center gap-12">
+          {/* Heading */}
+          <div className="text-center space-y-4">
+            <h1 className="text-3xl md:text-5xl font-bold">
+              Download the Qadam App
+            </h1>
+            <p className="text-muted-foreground text-base md:text-xl max-w-xl mx-auto">
+              Scan the QR code or tap a button below to download the app on your
+              device.
+            </p>
+          </div>
 
-          <p className="text-muted-foreground text-base md:text-xl">
-            You can download the Qadam app easily using one of the following
-            options.
-          </p>
+          {/* QR Code + Buttons */}
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* QR Code */}
+            <div className="flex flex-col items-center gap-4">
+              <div className="border-4 border-primary rounded-2xl p-4 shadow-lg">
+                <img
+                  src={QRCode}
+                  alt="QR Code to download Qadam app"
+                  className="w-48 h-48 object-contain"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground font-medium">
+                Scan with your phone camera
+              </p>
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            {/* Google Play */}
-            <Button
-              className="hide-download-button h-14 px-6 text-base flex gap-2"
-              onClick={() => window.open("https://play.google.com", "_blank")}
-            >
-              <DownloadIcon size={20} />
-              Download from Google Play
-            </Button>
+            {/* Divider */}
+            <div className="flex md:flex-col items-center gap-3">
+              <div className="w-16 h-px md:w-px md:h-16 bg-border" />
+              <span className="text-sm text-muted-foreground font-medium">
+                OR
+              </span>
+              <div className="w-16 h-px md:w-px md:h-16 bg-border" />
+            </div>
 
-            {/* App Store */}
-            <Button
-              variant="outline"
-              className="hide-download-button h-14 px-6 text-base flex gap-2"
-              onClick={() =>
-                window.open("https://www.apple.com/app-store/", "_blank")
-              }
-            >
-              <DownloadIcon size={20} />
-              Download from App Store
-            </Button>
+            {/* Store Buttons */}
+            <div className="flex flex-col gap-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.satam.qaddam
+"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={GooglePlay}
+                  alt="Download on Google Play"
+                  className="h-14 object-contain hover:opacity-80 transition-opacity cursor-pointer"
+                />
+              </a>
+              <a
+                href="https://apps.apple.com/sa/app/qaddam-wasal/id6759410662"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={AppStore}
+                  alt="Download on App Store"
+                  className="h-14 object-contain hover:opacity-80 transition-opacity cursor-pointer"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

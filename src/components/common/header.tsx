@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
-import Logo from "@/assets/svg/logo";
 
 interface IHeaderButtons {
   language: {
@@ -47,9 +46,15 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-6">
             <Link
               to="/"
-              className="flex items-center h-full min-w-[120px] sm:min-w-[140px] md:min-w-[160px]"
+              className="flex items-center h-full min-w-[120px] sm:min-w-[140px] md:min-w-40"
             >
-              <Logo className="w-full h-auto max-h-[50px] sm:max-h-[60px] md:max-h-[70px]" />
+              <div className="bg-white rounded-xl p-2">
+                <img
+                  src="/QaddamFinal-Transparent.webp"
+                  alt="Qadam Logo"
+                  className="w-[60px]  h-[55px] object-contain "
+                />
+              </div>
             </Link>
             {/* Desktop Nav (hidden on < lg) */}
             <ul className="hidden lg:flex gap-7 text-base items-center">
@@ -120,7 +125,7 @@ const Header: React.FC = () => {
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
             {isMenuOpen && (
-              <div className="lg:hidden absolute top-14 sm:top-20 left-0 w-full h-[30vh] bg-secondary z-40 p-6 flex flex-col gap-6 text-white overflow-y-auto">
+              <div className="lg:hidden absolute top-14 sm:top-20 left-0 w-full h-auto bg-secondary z-40 p-6 flex flex-col gap-6 text-white">
                 <ul className="flex flex-col text-sm sm:text-base gap-4 font-medium">
                   {navItems.map((item, idx) =>
                     item.dropdown ? (
@@ -152,14 +157,21 @@ const Header: React.FC = () => {
                     ),
                   )}
                 </ul>
+                <Link to="/download" onClick={() => setIsMenuOpen(false)}>
+                  <Button variant="default" className="w-full h-12 text-base">
+                    {buttons.download}
+                  </Button>
+                </Link>
               </div>
             )}
-            <Button
-              variant="default"
-              className="hide-download-button text-base h-12 w-44 hidden lg:block"
-            >
-              {buttons.download}
-            </Button>
+            <Link to="/download">
+              <Button
+                variant="default"
+                className="text-base h-12 w-44 hidden lg:block"
+              >
+                {buttons.download}
+              </Button>
+            </Link>
           </div>
         </Container>
         {/* BURGER MENU */}
