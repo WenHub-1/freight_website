@@ -2,8 +2,7 @@ import React from "react";
 import PageHeading from "@/components/common/page-heading";
 import AppStore from "@/assets/images/AppStore.png";
 import GooglePlay from "@/assets/images/GooglePlay.png";
-import QRCode from "@/assets/images/QR-code.png";
-
+import QRCode from "@/assets/images/QR-code.jpeg";
 const Download: React.FC = () => {
   return (
     <div>
