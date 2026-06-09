@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                 <img
                   src="/QaddamFinal-Transparent.webp"
                   alt="Qadam Logo"
-                  className="w-[60px]  h-[55px] object-contain "
+                  className="w-10 h-10  md:w-[60px]  md:h-[55px] object-contain "
                 />
               </div>
             </Link>
