@@ -7,7 +7,6 @@ import { Globe } from "lucide-react";
 import SnapChat from "@/assets/svg/snapChat.tsx";
 import Instagram from "@/assets/svg/instagram.tsx";
 import { APP_ROUTES } from "@/lib/constants";
-import Logo from "@/assets/svg/logo.tsx";
 
 // Define types for footer data
 interface FooterSection {
@@ -108,7 +107,13 @@ const Footer: React.FC = () => {
               {/* LEFT logo + description */}
               <div className="flex w-full md:w-2/5  pb-10 md:pb-0 flex-col gap-6">
                 <div className="flex items-start h-full min-w-[120px] sm:min-w-[140px] md:min-w-40">
-                  <Logo className="h-auto max-h-[50px] sm:max-h-[60px] md:max-h-[100px]" />
+                  <div className="bg-white rounded-xl p-2">
+                    <img
+                      src="/QaddamFinal-Transparent.webp"
+                      alt="Qadam Logo"
+                      className="w-[70px]  h-[70px] object-contain "
+                    />
+                  </div>{" "}
                 </div>
                 <p className=" w-64 md:max-w-60 text-sm  roboto-font">
                   {footerData.description}
@@ -169,7 +174,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col pt-3 gap-4">
               <div className="flex gap-4">
                 <Instagram />
                 <SnapChat />

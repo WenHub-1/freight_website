@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
 import Container from "../ui/container";
-import Logo from "@/assets/svg/logo";
 
 interface PageHeadingProps {
   title: string;
@@ -22,8 +21,12 @@ const PageHeading: React.FC<PageHeadingProps> = ({
         <div className="w-full h-[72px] sm:h-32 md:h-44 lg:h-56 flex bg-secondary rounded-lg md:rounded-[20px] justify-center items-center">
           <div className="flex gap-4 justify-center items-center">
             {icon && (
-              <div className="flex items-center h-full min-w-[120px] sm:min-w-[140px] md:min-w-[160px]">
-                <Logo className="w-full h-auto max-h-[50px] sm:max-h-[60px] md:max-h-[90px]" />
+              <div className="bg-white rounded-xl p-2">
+                <img
+                  src="/QaddamFinal-Transparent.webp"
+                  alt="Qadam Logo"
+                  className="w-[70px]  h-[70px] object-contain "
+                />
               </div>
             )}
             <h1 className=" text-2xl sm:text-3xl md:text-4xl lg:text-[52px] text-white font-semibold">
