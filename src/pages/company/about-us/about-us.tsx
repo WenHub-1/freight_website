@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PageHeading from "@/components/common/page-heading";
-import { GLOBAL_IMAGES } from "@/lib/file-image-url";
 import Container from "@/components/ui/container";
 
 const AboutUs: React.FC = () => {
@@ -16,24 +15,48 @@ const AboutUs: React.FC = () => {
 
   return (
     <div>
-      <PageHeading
-        title={aboutUs.title}
-        bigheading={true}
-        icon={GLOBAL_IMAGES.LOGO_QDAM2}
-      />
-      <Container>
-        <div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold inter-font">
+      <PageHeading title={aboutUs.title} />
+      <section className="py-20 bg-background">
+        <Container>
+          <div className="max-w-3xl mx-auto flex flex-col items-center gap-8 text-center">
+            <h2
+              className="font-tajawal font-black text-white leading-[1.2]"
+              style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
+            >
               {aboutUs.heading}
-            </h1>
-            <div className="flex flex-col text-sm md:text-base text-center font-medium inter-font gap-6 sm:gap-8 md:gap-10 lg:gap-12 justify-center items-center">
-              <p className="md:max-w-[67%]">{aboutUs.paragraph1}</p>
-              <p className="md:max-w-2/4">{aboutUs.paragraph2}</p>
+            </h2>
+            <div className="flex flex-col gap-6">
+              <p className="text-muted-foreground text-base leading-relaxed">
+                {aboutUs.paragraph1}
+              </p>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                {aboutUs.paragraph2}
+              </p>
+            </div>
+
+            {/* Stats row */}
+            <div className="grid grid-cols-3 gap-6 mt-6 w-full">
+              {[
+                { value: "2025", label: "Founded" },
+                { value: "KSA", label: "Operating in" },
+                { value: "24/7", label: "Available" },
+              ].map((stat, i) => (
+                <div
+                  key={i}
+                  className="bg-navy-mid border border-white/8 rounded-2xl p-6 text-center"
+                >
+                  <div className="font-tajawal font-black text-primary text-2xl sm:text-3xl mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-muted-foreground text-sm">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </section>
     </div>
   );
 };

@@ -1,21 +1,20 @@
 import React from "react";
 import HeroSection from "./hero-section";
-import BenefitsSection from "./benefits-section";
-import DashboardFeatureSection from "./dashboard-feature-section";
-import VehicleSection from "@/components/common/vehicle-section";
-import AppDownloadBanner from "@/components/common/app-download-banner";
-import Questions from "@/components/common/questions";
+import ServicesSection from "./services-section";
+import HowItWorksSection from "./how-it-works-section";
+import DriversSection from "./drivers-section";
+import TestimonialsSection from "./testimonials-section";
+import CTASection from "./cta-section";
 
 const Dashboard: React.FC = () => {
   return (
     <div>
-      {" "}
       <HeroSection />
-      <BenefitsSection />
-      <DashboardFeatureSection />
-      <VehicleSection />
-      <AppDownloadBanner />
-      <Questions />
+      <ServicesSection />
+      <HowItWorksSection />
+      <DriversSection />
+      <TestimonialsSection />
+      <CTASection />
     </div>
   );
 };
