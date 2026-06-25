@@ -66,8 +66,18 @@ const HowItWorksSection: React.FC = () => {
         {/* Steps */}
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Connecting line (desktop) */}
-          <div className="absolute top-9 start-[10%] end-[10%] h-px bg-[linear-gradient(90deg,transparent,rgb(var(--primary-rgb) / 0.3),transparent)] hidden lg:block" />
-
+          <div
+            className="absolute hidden lg:block pointer-events-none"
+            style={{
+              top: "36px", // center of the 72px circles
+              left: "8%",
+              right: "8%",
+              height: "1px",
+              background:
+                "linear-gradient(90deg, transparent 0%, rgba(132,204,22,0.15) 35%, rgba(132,204,22,0.15) 65%, transparent 100%)",
+              zIndex: 0,
+            }}
+          />
           {data.steps.map((step, i) => (
             <div
               key={i}

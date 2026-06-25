@@ -101,7 +101,7 @@ const DriversSection: React.FC = () => {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -bottom-5 -start-5 bg-primary text-background font-extrabold text-sm px-5 py-3.5 rounded-2xl shadow-primary-badge whitespace-nowrap">
+            <div className="absolute -bottom-5  -end-2 lg:-end-5 bg-primary text-background font-extrabold text-sm px-5 py-3.5 rounded-2xl shadow-primary-badge whitespace-nowrap">
               {data.dashboard.badge}
             </div>
           </div>
