@@ -69,7 +69,9 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center mb-4 no-underline">
-              <img src={logoImg} alt="Qaddam" className="h-14 w-auto" />
+              <div className="bg-white py-2 px-4 rounded-md">
+                <img src={logoImg} alt="Qaddam" className="h-14 w-auto" />
+              </div>{" "}
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-[260px]">
               {footer.description}

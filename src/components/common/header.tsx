@@ -86,7 +86,9 @@ const Header: React.FC = () => {
         <Container className="flex items-center justify-between h-[70px] sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center no-underline">
-            <img src={logoImg} alt="Qaddam" className="h-12 w-auto" />
+            <div className="bg-white py-2 px-4 rounded-md">
+              <img src={logoImg} alt="Qaddam" className="h-12 w-auto" />
+            </div>{" "}
           </Link>
 
           {/* Desktop Nav */}

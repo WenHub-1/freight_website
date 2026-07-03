@@ -69,8 +69,8 @@
       },
       {
         "num": "2",
-        "title": "Choose a Service",
-        "description": "Select the right service: Express delivery, ride trip, or business shipping."
+        "title": "Choose desired Vehicle",
+        "description": "Select the right vehicle for your needs: Bike, Sedan, Van, Truck and etc."
       },
       {
         "num": "3",
