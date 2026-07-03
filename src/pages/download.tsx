@@ -5,6 +5,7 @@ import Container from "@/components/ui/container";
 import AppStore from "@/assets/images/AppStore.png";
 import GooglePlay from "@/assets/images/GooglePlay.png";
 import QRCode from "@/assets/images/QR-code.jpeg";
+import { APP_STORE_URL, PLAY_STORE_URL } from "@/constants/links";
 
 const Download: React.FC = () => {
   const { t } = useTranslation();
@@ -17,10 +18,7 @@ const Download: React.FC = () => {
         <Container>
           <div className="max-w-4xl mx-auto flex flex-col items-center gap-10">
             <div className="text-center space-y-3">
-              <h2
-                className="font-tajawal font-black text-white leading-[1.2]"
-                style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
-              >
+              <h2 className="heading-page font-tajawal font-black text-white leading-[1.2]">
                 {t("downloadPage.heading")}
               </h2>
               <p className="text-muted-foreground text-base max-w-md mx-auto">
@@ -55,7 +53,7 @@ const Download: React.FC = () => {
               {/* Store Buttons */}
               <div className="flex flex-col items-center gap-4">
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.satam.qaddam"
+                  href={PLAY_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -66,7 +64,7 @@ const Download: React.FC = () => {
                   />
                 </a>
                 <a
-                  href="https://apps.apple.com/sa/app/qaddam-wasal/id6759410662"
+                  href={APP_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
+import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 
 interface Step {
   num: string;
@@ -17,23 +18,9 @@ interface HowData {
 
 const HowItWorksSection: React.FC = () => {
   const { t } = useTranslation();
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRevealAnimation<HTMLDivElement>();
 
   const data = t("howItWorks", { returnObjects: true }) as HowData;
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.1 },
-    );
-    const els = sectionRef.current?.querySelectorAll(".reveal");
-    els?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
@@ -54,10 +41,7 @@ const HowItWorksSection: React.FC = () => {
           <span className="inline-block bg-primary/12 border border-primary/25 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
             {data.tag}
           </span>
-          <h2
-            className="font-tajawal font-black text-white mb-4 leading-[1.2]"
-            style={{ fontSize: "clamp(1.9rem, 4vw, 3rem)" }}
-          >
+          <h2 className="heading-section font-tajawal font-black text-white mb-4 leading-[1.2]">
             {data.title}
           </h2>
           <p className="text-muted-foreground text-base">{data.subtitle}</p>
@@ -84,7 +68,7 @@ const HowItWorksSection: React.FC = () => {
               className="reveal flex flex-col items-center text-center relative"
               style={{ transitionDelay: `${i * 0.15}s` }}
             >
-              <div className="w-[72px] h-[72px] rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-dark))] flex items-center justify-center font-tajawal font-black text-3xl text-background shadow-primary-soft mb-6 relative z-10 transition-transform duration-300 hover:scale-110">
+              <div className="w-[72px] h-[72px] shrink-0 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-dark))] flex items-center justify-center font-tajawal font-black text-3xl leading-none text-background shadow-primary-soft mb-6 relative z-10 transition-transform duration-300 hover:scale-110">
                 {step.num}
               </div>
               <h4 className="font-tajawal font-bold text-lg text-white mb-2.5">

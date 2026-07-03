@@ -218,6 +218,17 @@
   font-family: "Cairo", sans-serif;
 }
 
+/* ─── Responsive heading sizes (clamp-based, not expressible in Tailwind) ─── */
+.heading-section {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+}
+.heading-page {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+.heading-cta {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+}
+
 /* ─── Green glow shadows ─── */
 .shadow-green-glow {
   box-shadow: 0 0 30px rgb(var(--primary-rgb) / 0.35);

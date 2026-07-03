@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { APP_ROUTES } from "@/lib";
+import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 
 interface Perk {
   icon: string;
@@ -34,23 +35,9 @@ interface DriversData {
 const DriversSection: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRevealAnimation<HTMLDivElement>();
 
   const data = t("drivers", { returnObjects: true }) as DriversData;
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) e.target.classList.add("visible");
-        });
-      },
-      { threshold: 0.1 },
-    );
-    const els = sectionRef.current?.querySelectorAll(".reveal");
-    els?.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 
   const rows = [
     data.dashboard.trips,
@@ -111,10 +98,7 @@ const DriversSection: React.FC = () => {
             <span className="inline-block bg-primary/12 border border-primary/25 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
               {data.tag}
             </span>
-            <h2
-              className="font-tajawal font-black text-white mb-4 leading-[1.2]"
-              style={{ fontSize: "clamp(1.9rem, 4vw, 3rem)" }}
-            >
+            <h2 className="heading-section font-tajawal font-black text-white mb-4 leading-[1.2]">
               {data.title}
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed mb-8">

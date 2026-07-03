@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import PageHeading from "@/components/common/page-heading";
 import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { APP_STORE_URL, PLAY_STORE_URL } from "@/constants/links";
+import { FEATURE_CARD } from "@/constants/css";
 
 const perks = [
   { icon: "💰", text: "Earn on your own schedule" },
@@ -24,10 +26,7 @@ const BecomeADriver: React.FC = () => {
       <section className="py-20 bg-background">
         <Container>
           <div className="max-w-2xl mx-auto text-center mb-14">
-            <h2
-              className="font-tajawal font-black text-white mb-4 leading-[1.2]"
-              style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
-            >
+            <h2 className="heading-page font-tajawal font-black text-white mb-4 leading-[1.2]">
               {t("drivers.title", { defaultValue: "Drive. Earn. Grow." })}
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed">
@@ -38,7 +37,7 @@ const BecomeADriver: React.FC = () => {
             </p>
           </div>
 
-          <div className="max-w-md mx-auto bg-navy-mid border border-primary/20 rounded-3xl p-10 mb-10">
+          <div className={`max-w-md mx-auto ${FEATURE_CARD} mb-10`}>
             <ul className="flex flex-col gap-0">
               {perks.map((perk, i) => (
                 <li
@@ -55,20 +54,12 @@ const BecomeADriver: React.FC = () => {
           </div>
 
           <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="https://apps.apple.com/sa/app/qaddam-wasal/id6759410662"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg">
                 {t("cta.appStore", { defaultValue: "Download on App Store" })}
               </Button>
             </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.satam.qaddam"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline">
                 {t("cta.googlePlay", { defaultValue: "Get it on Google Play" })}
               </Button>
