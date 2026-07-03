@@ -6,10 +6,12 @@ import ScrollToTop from "@/lib/scrool-to-top.tsx";
 
 const MainLayout: React.FC = () => {
   return (
-    <div>
+    <div className="bg-background min-h-screen">
       <Header />
       <ScrollToTop />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );

@@ -1,262 +1,191 @@
 {
   "header": {
     "nav": [
-      {
-        "label": "Ship with us",
-        "link": "/ship-with-us"
-      },
-      { "label": "Become a driver", "link": "/become-a-driver" },
-      { "label": "Partner", "link": "/partners" },
-      {
-        "label": "Company",
-        "dropdown": [
-          { "label": "About us", "link": "/about-us" },
-          { "label": "Careers", "link": "/careers" },
-          { "label": "Contact us", "link": "/contact-us" }
-        ]
-      }
+      { "label": "Services", "link": "/#services" },
+      { "label": "How It Works", "link": "/#how" },
+      { "label": "Join as Driver", "link": "/#drivers" },
+      { "label": "Reviews", "link": "/#testimonials" }
     ],
     "buttons": {
-      "language": {
-        "english": "English",
-        "arabic": "العربية"
-      },
-      "download": "Download the app"
+      "language": { "english": "English", "arabic": "العربية" },
+      "download": "Download App"
     }
+  },
+  "hero": {
+    "badge": "Now available in Saudi Arabia",
+    "headline1": "Delivered at",
+    "headline2": "Lightning Speed",
+    "headline3": "Everywhere",
+    "subtitle": "Whether you need to deliver a package, need a quick trip, or want to move your goods — Qaddam is here to get it done at the right time.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "stats": [
+    { "num": "50K+", "label": "Active Drivers" },
+    { "num": "250K+", "label": "Orders Completed" },
+    { "num": "20+", "label": "Cities Covered" },
+    { "num": "4.9 ★", "label": "Store Rating" }
+  ],
+  "services": {
+    "tag": "OUR SERVICES",
+    "title": "Everything You Need in One App",
+    "subtitle": "Qaddam brings together delivery, transportation, and logistics in one easy-to-use platform.",
+    "items": [
+      {
+        "icon": "📦",
+        "title": "Order Delivery",
+        "description": "Deliver your packages, documents, or anything you need — fast and safely to the recipient's door.",
+        "tag": "Fast • Reliable"
+      },
+      {
+        "icon": "🚗",
+        "title": "Ride Trips",
+        "description": "Book your ride with professional drivers available 24/7 throughout the week.",
+        "tag": "24/7 • Safe"
+      },
+      {
+        "icon": "🏢",
+        "title": "Business Shipping",
+        "description": "Flexible logistics solutions for small and medium businesses with real-time tracking.",
+        "tag": "For Business"
+      },
+      {
+        "icon": "⚡",
+        "title": "Express Delivery",
+        "description": "Express service delivering within 30 minutes inside the city for your urgent priorities.",
+        "tag": "Under 30 min"
+      }
+    ]
+  },
+  "howItWorks": {
+    "tag": "HOW QADDAM WORKS",
+    "title": "Simple • Fast • Reliable",
+    "subtitle": "Just four steps separate you from ideal delivery",
+    "steps": [
+      {
+        "num": "1",
+        "title": "Enter Your Destination",
+        "description": "Set your pickup and drop-off location easily on the map or type the address directly."
+      },
+      {
+        "num": "2",
+        "title": "Choose desired Vehicle",
+        "description": "Select the right vehicle for your needs: Bike, Sedan, Van, Truck and etc."
+      },
+      {
+        "num": "3",
+        "title": "Track in Real Time",
+        "description": "Monitor your driver moment by moment and communicate directly until your order arrives safely."
+      },
+      {
+        "num": "4",
+        "title": "Receive & Rate",
+        "description": "Receive your order and rate your experience to help us provide even better service next time."
+      }
+    ]
+  },
+  "drivers": {
+    "tag": "JOIN AS DRIVER",
+    "title": "Turn Your Time Into Real Income",
+    "subtitle": "Join thousands of drivers earning flexible income with Qaddam. You control your schedule and earnings.",
+    "perks": [
+      { "icon": "💰", "text": "Daily earnings with daily and weekly bonuses" },
+      { "icon": "⏰", "text": "Flexible work hours that suit your schedule" },
+      { "icon": "🛡️", "text": "Full insurance and protection on every trip" },
+      { "icon": "📱", "text": "Simple, clear driver app without complexity" }
+    ],
+    "cta": "Register as Driver Now",
+    "dashboard": {
+      "title": "Your Daily Earnings Dashboard",
+      "trips": { "label": "Trips Completed", "value": "12 trips" },
+      "distance": { "label": "Total Distance", "value": "86 km" },
+      "bonus": { "label": "Achievement Bonus", "value": "+ 50 SAR" },
+      "total": { "label": "Today's Total", "value": "SAR 320" },
+      "badge": "⚡ Peak Bonus Active Now!"
+    }
+  },
+  "testimonials": {
+    "tag": "CUSTOMER REVIEWS",
+    "title": "Trusted by Qaddam Every Day",
+    "items": [
+      {
+        "stars": 5,
+        "text": "Outstanding service! The driver arrived in under 10 minutes and the delivery was very fast. I'll definitely keep using Qaddam for my orders.",
+        "name": "Mohammed Al-Otaibi",
+        "role": "Client in Riyadh",
+        "initial": "M"
+      },
+      {
+        "stars": 5,
+        "text": "Best delivery app I've tried! The real-time tracking is great and I always meet my company's delivery deadlines because of Qaddam.",
+        "name": "Sara Al-Zahrani",
+        "role": "E-commerce Store Owner",
+        "initial": "S"
+      },
+      {
+        "stars": 5,
+        "text": "As a driver at Qaddam, the earnings are excellent and the app is easy to use. Support is always available and responds quickly.",
+        "name": "Faisal Al-Dosari",
+        "role": "Partner Driver in Jeddah",
+        "initial": "F"
+      }
+    ]
+  },
+  "downloadPage": {
+    "pageTitle": "Download App",
+    "heading": "Download the Qaddam App",
+    "subtitle": "Scan the QR code or tap a button below to download the app on your device.",
+    "scanPrompt": "Scan with your phone camera",
+    "or": "OR"
+  },
+  "cta": {
+    "tag": "Download the App",
+    "title": "Ready to Start with Qaddam?",
+    "subtitle": "Join more than 250,000 users who trust Qaddam daily across the Kingdom.",
+    "appStore": "Download from App Store",
+    "googlePlay": "Download from Google Play"
   },
   "footer": {
-    "description": "Qdam is Empowering businesses and drivers with seamless delivery solutions.",
-    "footerTop": {
-      "heading": "Get started with QDAM",
-      "paragraph": "Join us as a delivery driver or partner and start earning right now!",
-      "buttonText": "Download the app",
-      "buttonTextShort": "Download app"
-    },
-    "service": {
-      "title": "SERVICE",
-      "items": ["Ship with us", "Become a driver", "Partner & earn"]
+    "description": "The fastest delivery and transportation platform in Saudi Arabia. Connecting customers with thousands of professional drivers around the clock.",
+    "services": {
+      "title": "Services",
+      "items": [
+        { "label": "Order Delivery", "link": "/#services" },
+        { "label": "Ride Trips", "link": "/#services" },
+        { "label": "Business Shipping", "link": "/#services" },
+        { "label": "Express Delivery", "link": "/#services" }
+      ]
     },
     "company": {
-      "title": "COMPANY",
-      "items": ["About us", "Careers", " Contact us"]
-    },
-    "legal": {
-      "title": "LEGAL",
-      "items": ["Privacy Policy", "Terms & Conditions"]
-    }
-  },
-  "dashboard": {
-    "hero": {
-      "title": "Trucking Made Simple",
-      "subtitle": "Your on-demand delivery platform for every shipment.",
-      "buttonText": "Download the app"
-    },
-    "benefitsSection": {
-      "title": "One Platform, Endless Possibilities",
+      "title": "Company",
       "items": [
-        {
-          "title": "Ship with us",
-          "subtitle": "With Qdam, pickup and drop off, hassle-free!"
-        },
-        {
-          "title": "Become a driver",
-          "subtitle": "Enjoy flexible hours, choose your rates, and drive your way to extra income."
-        },
-        {
-          "title": "Partner & earn",
-          "subtitle": "Onboard drivers. Earn commissions. Grow your income."
-        }
+        { "label": "About Us", "link": "/about-us" },
+        { "label": "Join as Driver", "link": "/#drivers" },
+        { "label": "Careers", "link": "/careers" }
       ]
     },
-    "featureSection": {
-      "title": "Quick. Easy. Affordable.",
+    "support": {
+      "title": "Support",
       "items": [
-        {
-          "title": "Affordable",
-          "subtitle": "Easy negotiation between shipper and the driver to get the right price."
-        },
-        {
-          "title": "Order matching",
-          "subtitle": "Choose from various vehicles for your delivery needs."
-        },
-        {
-          "title": "Verified Drivers",
-          "subtitle": "Every driver is verified to ensure reliable and professional service."
-        },
-        {
-          "title": "Real-time tracking",
-          "subtitle": "Real-time tracking for your bookings."
-        }
+        { "label": "Contact Us", "link": "/contact-us" },
+        { "label": "Privacy Policy", "link": "/privacy-policy" },
+        { "label": "Terms & Conditions", "link": "/terms-conditions" }
       ]
     },
-    "vehicleSection": {
-      "title": "Choose the right vehicle for your delivery"
-    },
-    "appDownloadBanner": {
-      "buttonText": "Download app",
-      "title": "Get the app on iPhone or Android — from parcels to truckloads."
-    },
-    "faqSection": {
-      "title": "Frequently Asked Questions",
-      "items": [
-        {
-          "question": "What services does your platform provide?",
-          "answer": [
-            "We connect customers with verified truck drivers for on-demand or scheduled goods transportation across Saudi Arabia."
-          ]
-        },
-        {
-          "question": "How does the booking process work?",
-          "answer": [
-            "You open the app, enter pickup and drop-off locations, choose a vehicle type, negotiate rates with driver, and confirm the booking."
-          ]
-        },
-        {
-          "question": "What types of vehicles are available?",
-          "answer": [
-            "We offer multiple truck categories including pickups, Dynas, 1-ton, 3-ton, 7-ton, and 10-ton trucks to match different cargo needs."
-          ]
-        },
-        {
-          "question": "Are your drivers licensed and verified?",
-          "answer": [
-            "Yes. We verify all drivers through a complete background check, license verification, and compliance with Saudi transport regulations."
-          ]
-        },
-        {
-          "question": "How do you ensure cargo safety?",
-          "answer": [
-            "We track each trip in real time but cargo security and safety is a responsibility of the driver."
-          ]
-        },
-        {
-          "question": "How do I pay for a trip?",
-          "answer": [
-            "Currently you can pay directly to the driver using cash or online payment services like Mada or Apple Pay."
-          ]
-        },
-        {
-          "question": "Can I schedule a truck in advance?",
-          "answer": [
-            "Yes. You can schedule pickups hours or days ahead for planned shipments."
-          ]
-        },
-        {
-          "question": "What areas do you operate in?",
-          "answer": [
-            "We operate across major cities and highways in Saudi Arabia, including Riyadh, Jeddah, Dammam, and expanding nationwide."
-          ]
-        },
-        {
-          "question": "How do I contact customer support?",
-          "answer": [
-            "You can reach our support team 24/7 through the in-app chat, email, or hotline for immediate assistance."
-          ]
-        }
-      ]
-    }
-  },
-  "shipWithUs": {
-    "title": "Ship with us",
-    "featureSection": {
-      "title": "Quick. Easy. Affordable.",
-      "items": [
-        {
-          "title": "Affordable",
-          "subtitle": "Easy negotiation between shipper and the driver to get the right price."
-        },
-        {
-          "title": "Order matching",
-          "subtitle": "Choose from various vehicles for your delivery needs."
-        },
-        {
-          "title": "Verified Drivers",
-          "subtitle": "Every driver is verified to ensure reliable and professional service."
-        },
-        {
-          "title": "Real-time tracking",
-          "subtitle": "Real-time tracking for your bookings."
-        }
-      ]
-    }
-  },
-  "becomeDriver": {
-    "title": "Become a Driver",
-    "featureSection": {
-      "title": "Why deliver with Qdam?",
-      "items": [
-        {
-          "title": "Flexible hours",
-          "subtitle": "Choose when you want to work and manage deliveries on your own schedule."
-        },
-        {
-          "title": "Your prices",
-          "subtitle": "Set your own delivery rates and earn what you deserve for every trip."
-        },
-        {
-          "title": "Secure payments",
-          "subtitle": "Receive payments safely and on time through our trusted in-app system."
-        },
-        {
-          "title": "Ranking performance",
-          "subtitle": "Boost your profile by completing more orders and maintaining top ratings."
-        }
-      ]
-    },
-    "requirementsSection": {
-      "title": "Requirements to start delivering with Qdam",
-      "subtitle": "Submit your documents and get verified to begin delivering.",
-      "items": [
-        { "label": "A Vehicle" },
-        { "label": "Personal Identification" },
-        { "label": "Vehical registration" },
-        { "label": "Smartphone" },
-        { "label": "Driver license" },
-        { "label": "Age above 18" }
-      ]
-    }
-  },
-  "partners": {
-    "title": "Share and earn",
-    "featureSection": {
-      "title": "Become partner and earn",
-      "items": [
-        {
-          "title": "Share your referral code",
-          "subtitle": "Easy negotiation between shipper and the driver to get the right price."
-        },
-        {
-          "title": "Receive commisions",
-          "subtitle": "Choose from various vehicles for your delivery needs."
-        },
-        {
-          "title": "Withdraw your earning",
-          "subtitle": "Every driver is verified to ensure reliable and professional service."
-        }
-      ]
-    },
-    "requirementsSection": {
-      "title": "Requirements to become partner with Qdam",
-      "subtitle": "Submit your documents and get verified to begin delivering.",
-      "items": [
-        { "label": "Personal Identification" },
-        { "label": "Smartphone" },
-        { "label": "Age above 18" }
-      ]
-    }
+    "copyright": "© 2025 Qaddam. All rights reserved."
   },
   "Company": {
     "title": "Contact us",
     "aboutUs": {
       "title": "About us",
       "heading": "Trucking Made Simple",
-      "paragraph1": "Founded in Saudi Arabia in 2025, Qdam is an on-demand delivery platform built to empower communities by making logistics fast, simple, and affordable. With just a click, individuals, small businesses, and enterprises can access a wide fleet of delivery vehicles operated by professional driver partners.",
+      "paragraph1": "Founded in Saudi Arabia in 2025, Qaddam is an on-demand delivery platform built to empower communities by making logistics fast, simple, and affordable.",
       "paragraph2": "Driven by technology, we connect people, vehicles, and goods to move what matters and support local communities."
     },
     "careers": {
-      "title": "Find your career at Qdam",
-      "heading": "Career at Qdam",
-      "paragraph": "Qdam is redefining on-demand delivery through technology, empowering users to send and receive with speed and confidence.",
+      "title": "Find your career at Qaddam",
+      "heading": "Career at Qaddam",
+      "paragraph": "Qaddam is redefining on-demand delivery through technology, empowering users to send and receive with speed and confidence.",
       "buttonText": "Contact us for jobs"
     },
     "contactUs": {
@@ -277,10 +206,7 @@
             "Service Hours: Sun-Thu 9:00 AM - 6:00 PM"
           ]
         },
-        {
-          "title": "Location",
-          "lines": ["Phone: +966 56 444 4538"]
-        }
+        { "title": "Location", "lines": ["Kingdom of Saudi Arabia"] }
       ]
     }
   }

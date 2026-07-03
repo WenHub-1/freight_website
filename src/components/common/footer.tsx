@@ -1,201 +1,139 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Container from "../ui/container";
-import FooterTop from "./footer-top.tsx";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Globe } from "lucide-react";
-import SnapChat from "@/assets/svg/snapChat.tsx";
-import Instagram from "@/assets/svg/instagram.tsx";
-import { APP_ROUTES } from "@/lib/constants";
+import Container from "@/components/ui/container";
+import logoImg from "@/assets/images/logo-transparent-background.png";
+import TwitterIcon from "@/assets/svg/twitter";
+import InstagramIcon from "@/assets/svg/instagram";
+import FacebookIcon from "@/assets/svg/facebook";
+import TiktokIcon from "@/assets/svg/tiktok";
+import { SOCIAL_LINKS } from "@/constants/links";
 
-// Define types for footer data
+interface FooterItem {
+  label: string;
+  link: string;
+}
+
 interface FooterSection {
   title: string;
-  items: string[];
+  items: FooterItem[];
 }
 
 interface FooterData {
   description: string;
-  service: FooterSection;
+  services: FooterSection;
   company: FooterSection;
-  legal: FooterSection;
+  support: FooterSection;
+  copyright: string;
 }
 
-// Map footer items to their routes based on section and item text
-const getItemRoute = (sectionTitle: string, item: string): string | null => {
-  const trimmedItem = item.trim();
-
-  // Service section routes
-  if (sectionTitle === "SERVICE" || sectionTitle === "الخدمات") {
-    if (trimmedItem === "Ship with us" || trimmedItem === "الشحن معنا")
-      return APP_ROUTES.shipWithUs;
-    if (trimmedItem === "Become a driver" || trimmedItem === "انضم كسائق")
-      return APP_ROUTES.becomeADriver;
-    if (trimmedItem === "Partner & earn" || trimmedItem === "شارك واربح")
-      return APP_ROUTES.partners;
-  }
-
-  // Company section routes
-  if (sectionTitle === "COMPANY" || sectionTitle === "الشركة") {
-    if (trimmedItem === "About us" || trimmedItem === "من نحن")
-      return APP_ROUTES.aboutUs;
-    if (trimmedItem === "Careers" || trimmedItem === "الوظائف")
-      return APP_ROUTES.careers;
-    if (trimmedItem === "Contact us" || trimmedItem === "تواصل معنا")
-      return APP_ROUTES.contactUs;
-  }
-
-  // Legal section routes
-  if (sectionTitle === "LEGAL" || sectionTitle === "القانوني") {
-    if (trimmedItem === "Privacy Policy" || trimmedItem === "سياسة الخصوصية")
-      return APP_ROUTES.privacyPolicy;
-    if (
-      trimmedItem === "Terms & Conditions" ||
-      trimmedItem === "سياسة الخصوصية"
-    )
-      return APP_ROUTES.termConditions;
-  }
-
-  return null;
-};
-
-// Check if item is Terms & Conditions and get PDF path
-const getTermsAndConditionsPdf = (
-  sectionTitle: string,
-  item: string,
-  currentLanguage: string,
-): string | null => {
-  const trimmedItem = item.trim();
-
-  // Check if it's in the legal section and is Terms & Conditions
-  if (sectionTitle === "LEGAL" || sectionTitle === "القانوني") {
-    if (
-      trimmedItem === "Terms & Conditions" ||
-      trimmedItem === "الشروط والأحكام"
-    ) {
-      // Return PDF path based on current language
-      return currentLanguage === "ar"
-        ? "/documents/Terms and Conditions Arabic.pdf"
-        : "/documents/Terms and Conditions.pdf";
-    }
-  }
-
-  return null;
-};
+const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({
+  href,
+  children,
+}) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-9 h-9 rounded-[10px] bg-white/5 border border-white/8 flex items-center justify-center text-muted-foreground hover:bg-primary/15 hover:border-primary/35 hover:text-primary transition-all duration-200"
+  >
+    {children}
+  </a>
+);
 
 const Footer: React.FC = () => {
-  const { t, i18n } = useTranslation();
-
-  // Type the translation result
-  const footerData = t("footer", { returnObjects: true }) as FooterData;
-  const currentLanguage = i18n.language;
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+  const footer = t("footer", { returnObjects: true }) as FooterData;
 
   const sections: FooterSection[] = [
-    footerData.service,
-    footerData.company,
-    footerData.legal,
+    footer.services,
+    footer.company,
+    footer.support,
   ];
 
+  const handleLink = (link: string) => {
+    if (link.startsWith("/#")) {
+      const id = link.slice(2);
+      if (window.location.pathname === "/") {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        navigate("/");
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      }
+    }
+  };
+
   return (
-    <div className=" relative">
-      <FooterTop />
-
-      <div className="bg-secondary flex items-center pt-36 sm:pt-40 md:pt-24 pb-5 md:pb-8 h-full">
-        <Container className="text-white pb-0!">
-          <div className="flex flex-col  ">
-            <div className="flex  flex-col md:flex-row flex-wrap ">
-              {/* LEFT logo + description */}
-              <div className="flex w-full md:w-2/5  pb-10 md:pb-0 flex-col gap-6">
-                <div className="flex items-start h-full min-w-[120px] sm:min-w-[140px] md:min-w-40">
-                  <div className="bg-white rounded-xl p-2">
-                    <img
-                      src="/QaddamFinal-Transparent.webp"
-                      alt="Qadam Logo"
-                      className="w-[70px]  h-[70px] object-contain "
-                    />
-                  </div>{" "}
-                </div>
-                <p className=" w-64 md:max-w-60 text-sm  roboto-font">
-                  {footerData.description}
-                </p>
-              </div>
-              <div className="flex w-full md:w-3/5 justify-between  flex-wrap">
-                {/* Dynamic sections */}
-                {sections.map((section, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col pb-10 pr-12 md:pr-0 md:pb-0 gap-[26px]"
-                  >
-                    <h1 className="text-base font-medium tracking-[3px] roboto-font leading-[18px]">
-                      {section.title}
-                    </h1>
-                    <ul className="flex flex-col gap-5">
-                      {section.items.map((item, i) => {
-                        const route = getItemRoute(section.title, item);
-                        const pdfPath = getTermsAndConditionsPdf(
-                          section.title,
-                          item,
-                          currentLanguage,
-                        );
-                        const itemContent = item.trim();
-
-                        return (
-                          <li
-                            key={i}
-                            className="inter-font leading-5 text-base"
-                          >
-                            {route ? (
-                              <Link
-                                to={route}
-                                className="transition-colors hover:text-primary"
-                              >
-                                {itemContent}
-                              </Link>
-                            ) : pdfPath ? (
-                              <a
-                                href={pdfPath}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="transition-colors hover:text-primary cursor-pointer"
-                              >
-                                {itemContent}
-                              </a>
-                            ) : (
-                              <span className="cursor-default">
-                                {itemContent}
-                              </span>
-                            )}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex flex-col pt-3 gap-4">
-              <div className="flex gap-4">
-                <Instagram />
-                <SnapChat />
-              </div>
-              <div className="flex md:gap-0 gap-4 flex-col-reverse md:flex-row justify-between">
-                <h2 className="roboto-font text-sm">
-                  Qdam © 2025, All Rights Reserved
-                </h2>
-                <div className="flex pb-1 gap-2">
-                  <Globe />
-                  <h1 className="font-medium  text-sm sm:text-base">
-                    Kingdom of Saudi Arabia - English
-                  </h1>
-                </div>
-              </div>
-              <div className="w-full border-b border-white" />
-            </div>
+    <footer className="bg-background border-t border-white/6">
+      <Container className="py-14 sm:py-16">
+        {/* Top grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <Link to="/" className="flex items-center mb-4 no-underline">
+              <div className="bg-white py-2 px-4 rounded-md">
+                <img src={logoImg} alt="Qaddam" className="h-14 w-auto" />
+              </div>{" "}
+            </Link>
+            <p className="text-muted-foreground text-sm leading-relaxed max-w-[260px]">
+              {footer.description}
+            </p>
           </div>
-        </Container>
-      </div>
-    </div>
+
+          {/* Link sections */}
+          {sections.map((section, i) => (
+            <div key={i} className="flex flex-col gap-4">
+              <h5 className="font-bold text-white text-base">
+                {section.title}
+              </h5>
+              <ul className="flex flex-col gap-3 list-none">
+                {section.items.map((item, j) => (
+                  <li key={j}>
+                    {item.link.startsWith("/#") ? (
+                      <button
+                        onClick={() => handleLink(item.link)}
+                        className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 bg-transparent border-0 cursor-pointer p-0"
+                      >
+                        {item.label}
+                      </button>
+                    ) : (
+                      <Link
+                        to={item.link}
+                        className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200 no-underline"
+                      >
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom bar */}
+        <div className="border-t border-white/6 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-muted-foreground text-sm">{footer.copyright}</p>
+          <div className="flex gap-3">
+            <SocialIcon href={SOCIAL_LINKS.twitter}>
+              <TwitterIcon />
+            </SocialIcon>
+            <SocialIcon href={SOCIAL_LINKS.instagram}>
+              <InstagramIcon />
+            </SocialIcon>
+            <SocialIcon href={SOCIAL_LINKS.facebook}>
+              <FacebookIcon />
+            </SocialIcon>
+            <SocialIcon href={SOCIAL_LINKS.tiktok}>
+              <TiktokIcon />
+            </SocialIcon>
+          </div>
+        </div>
+      </Container>
+    </footer>
   );
 };
 

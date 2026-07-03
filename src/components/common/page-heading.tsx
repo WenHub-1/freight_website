@@ -1,57 +1,21 @@
 import React from "react";
-import { Button } from "../ui/button";
-import Container from "../ui/container";
+import Container from "@/components/ui/container";
 
 interface PageHeadingProps {
   title: string;
-  button?: boolean;
-  icon?: string;
-  bigheading?: boolean;
 }
 
-const PageHeading: React.FC<PageHeadingProps> = ({
-  title,
-  button,
-  icon,
-  bigheading,
-}) => {
+const PageHeading: React.FC<PageHeadingProps> = ({ title }) => {
   return (
-    <Container className="pt-10 w-full sm:pt-14 md:pt-20 lg:pt-32">
-      {bigheading ? (
-        <div className="w-full h-[72px] sm:h-32 md:h-44 lg:h-56 flex bg-secondary rounded-lg md:rounded-[20px] justify-center items-center">
-          <div className="flex gap-4 justify-center items-center">
-            {icon && (
-              <div className="bg-white rounded-xl p-2">
-                <img
-                  src="/QaddamFinal-Transparent.webp"
-                  alt="Qadam Logo"
-                  className="w-[70px]  h-[70px] object-contain "
-                />
-              </div>
-            )}
-            <h1 className=" text-2xl sm:text-3xl md:text-4xl lg:text-[52px] text-white font-semibold">
-              {title}
-            </h1>
-          </div>
-        </div>
-      ) : (
-        <div className=" flex justify-center items-center  ">
-          <div className="flex gap-4 sm:gap-7 md:gap-9 lg:gap-12  items-center bg-secondary px-3.5 p-5 md:p-8 lg:p-10 rounded-lg md:rounded-xl lg:rounded-2xl">
-            <h1 className=" text-2xl sm:text-3xl  md:text-4xl lg:text-[52px] text-white font-semibold">
-              {title}
-            </h1>
-            {button && (
-              <Button
-                variant="primary-shadow"
-                className="hide-download-button w-28 sm:w-36 md:w-44 h-8 sm:h-9 md:h-11 lg:h-14  lg:w-52 font-medium  text-[10px] sm:text-xs md:text-base lg:text-lg"
-              >
-                Download the app
-              </Button>
-            )}
-          </div>
-        </div>
-      )}
-    </Container>
+    <div className="pt-20 bg-background">
+      <div className="bg-navy-mid border-b border-white/8">
+        <Container className="py-12 sm:py-16">
+          <h1 className="font-tajawal font-black text-3xl sm:text-4xl lg:text-5xl text-white text-center">
+            {title}
+          </h1>
+        </Container>
+      </div>
+    </div>
   );
 };
 

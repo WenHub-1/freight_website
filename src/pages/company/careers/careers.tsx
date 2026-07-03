@@ -1,13 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PageHeading from "@/components/common/page-heading";
-import { CAREER } from "@/lib/file-image-url";
 import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { APP_ROUTES } from "@/lib";
 import { useNavigate } from "react-router-dom";
 
-const Carrers: React.FC = () => {
+const Careers: React.FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -19,50 +18,36 @@ const Carrers: React.FC = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="z-20">
-        <PageHeading bigheading={true} title={careers.title} />
-      </div>
-      <div className="absolute top-0 w-full -z-10">
-        {" "}
-        <img
-          className=" h-40 sm:h-64 md:h-96  lg:h-[481px] w-full"
-          src={CAREER.HERO_SECTION}
-          alt=""
-        />
-      </div>
-      <Container>
-        <div className="flex justify-center lg:justify-between flex-wrap gap-5 lg:gap-0  pt-10 sm:pt-12 md:pt-16 lg:pt-24 items-center">
-          <div className="pl-0 lg:pl-[39px]">
-            <img
-              className="  w-[358px] h-[336px] md:h-[400px] md:w-[450px]  lg:h-[450px] lg:w-[510px] xl:h-[499px] xl:w-[566px] object-contain"
-              src={CAREER.CAREER_AT_QDAM}
-              alt=""
-            />
-          </div>
-          <div className="flex flex-col items-center lg:items-start gap-6  md:gap-8 lg:gap-10 max-w-[422px]  ">
-            <div className="flex flex-col gap-4">
-              <h1 className="flex justify-center lg:justify-start text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold inter-font">
-                {careers.heading}
-              </h1>
-              <p className="flex text-center lg:text-start  text-sm md:text-base font-medium inter-font">
-                {careers.paragraph}
-              </p>
-            </div>
-            <Button
-              className=" h-14 w-52"
-              variant="primary-shadow"
-              onClick={() => {
-                navigate(APP_ROUTES.contactUs);
-              }}
+    <div>
+      <PageHeading title={careers.title} />
+      <section className="py-20 bg-background">
+        <Container>
+          <div className="max-w-2xl mx-auto flex flex-col items-center gap-8 text-center">
+            <h2
+              className="font-tajawal font-black text-white leading-[1.2]"
+              style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
             >
-              {careers.buttonText}
-            </Button>
+              {careers.heading}
+            </h2>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              {careers.paragraph}
+            </p>
+
+            <div className="bg-navy-mid border border-primary/20 rounded-3xl p-10 w-full">
+              <p className="text-muted-foreground text-sm mb-6">
+                We're always looking for passionate people to join our team. If
+                you're interested in working with us, reach out via our contact
+                page.
+              </p>
+              <Button size="lg" onClick={() => navigate(APP_ROUTES.contactUs)}>
+                {careers.buttonText}
+              </Button>
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </section>
     </div>
   );
 };
 
-export default Carrers;
+export default Careers;
