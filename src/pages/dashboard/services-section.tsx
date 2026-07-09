@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
-import { REVEAL_CARD, SECTION_TAG } from "@/constants/css";
+import { REVEAL_CARD, SECTION_TAG, STAGGER_DELAYS } from "@/constants/css";
 
 interface ServiceItem {
   icon: string;
@@ -43,8 +43,7 @@ const ServicesSection: React.FC = () => {
           {data.items.map((item, i) => (
             <div
               key={i}
-              className={REVEAL_CARD}
-              style={{ transitionDelay: `${i * 0.1}s` }}
+              className={`${REVEAL_CARD} ${STAGGER_DELAYS[i % STAGGER_DELAYS.length]}`}
             >
               {/* Corner glow */}
               <div className="absolute top-0 end-0 w-20 h-20 bg-[radial-gradient(circle_at_top_right,rgb(var(--primary-rgb) / 0.12),transparent_70%)] rounded-[0_24px_0_80px] transition-all duration-350 group-hover:w-28 group-hover:h-28" />
