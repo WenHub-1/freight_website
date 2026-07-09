@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import PageHeading from "@/components/common/page-heading";
 import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { HEADING_CLAMP } from "@/constants/css";
 
 const benefits = [
   { icon: "🤝", text: "Dedicated account manager" },
@@ -23,8 +24,7 @@ const Partners: React.FC = () => {
         <Container>
           <div className="max-w-2xl mx-auto text-center mb-14">
             <h2
-              className="font-tajawal font-black text-white mb-4 leading-[1.2]"
-              style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}
+              className={`font-tajawal font-black text-white mb-4 leading-[1.2] ${HEADING_CLAMP}`}
             >
               {t("services.tag", {
                 defaultValue: "Grow Your Business with Qaddam",

@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
+import { STAGGER_DELAYS } from "@/constants/css";
 
 interface Step {
   num: string;
@@ -25,11 +26,7 @@ const HowItWorksSection: React.FC = () => {
   return (
     <section
       id="how"
-      className="py-24 relative overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(180deg, var(--background) 0%, var(--navy-mid) 50%, var(--background) 100%)",
-      }}
+      className="py-24 relative overflow-hidden bg-[linear-gradient(180deg,var(--background)_0%,var(--navy-mid)_50%,var(--background)_100%)]"
       ref={sectionRef}
     >
       {/* Ambient glow */}
@@ -51,22 +48,13 @@ const HowItWorksSection: React.FC = () => {
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Connecting line (desktop) */}
           <div
-            className="absolute hidden lg:block pointer-events-none"
-            style={{
-              top: "36px", // center of the 72px circles
-              left: "8%",
-              right: "8%",
-              height: "1px",
-              background:
-                "linear-gradient(90deg, transparent 0%, rgba(132,204,22,0.15) 35%, rgba(132,204,22,0.15) 65%, transparent 100%)",
-              zIndex: 0,
-            }}
+            // top-9 (36px) centers the line on the 72px step circles
+            className="absolute hidden lg:block pointer-events-none top-9 left-[8%] right-[8%] h-px z-0 bg-[linear-gradient(90deg,transparent_0%,rgba(132,204,22,0.15)_35%,rgba(132,204,22,0.15)_65%,transparent_100%)]"
           />
           {data.steps.map((step, i) => (
             <div
               key={i}
-              className="reveal flex flex-col items-center text-center relative"
-              style={{ transitionDelay: `${i * 0.15}s` }}
+              className={`reveal flex flex-col items-center text-center relative ${STAGGER_DELAYS[i % STAGGER_DELAYS.length]}`}
             >
               <div className="w-[72px] h-[72px] shrink-0 rounded-full bg-[linear-gradient(135deg,var(--primary),var(--primary-dark))] flex items-center justify-center font-tajawal font-black text-3xl leading-none text-background shadow-primary-soft mb-6 relative z-10 transition-transform duration-300 hover:scale-110">
                 {step.num}

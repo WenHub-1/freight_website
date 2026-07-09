@@ -94,7 +94,7 @@ const DriversSection: React.FC = () => {
           </div>
 
           {/* Text side */}
-          <div className="reveal" style={{ transitionDelay: "0.2s" }}>
+          <div className="reveal delay-200">
             <span className="inline-block bg-primary/12 border border-primary/25 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
               {data.tag}
             </span>

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
-import { TESTIMONIAL_CARD, SECTION_TAG } from "@/constants/css";
+import { TESTIMONIAL_CARD, SECTION_TAG, STAGGER_DELAYS } from "@/constants/css";
 
 interface TestimonialItem {
   stars: number;
@@ -46,8 +46,7 @@ const TestimonialsSection: React.FC = () => {
           {data.items.map((item, i) => (
             <div
               key={i}
-              className={TESTIMONIAL_CARD}
-              style={{ transitionDelay: `${i * 0.1}s` }}
+              className={`${TESTIMONIAL_CARD} ${STAGGER_DELAYS[i % STAGGER_DELAYS.length]}`}
             >
               <Stars count={item.stars} />
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">

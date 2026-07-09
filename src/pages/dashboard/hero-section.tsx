@@ -34,22 +34,13 @@ const HeroSection: React.FC = () => {
 
       {/* Floating bubbles — right side only */}
       {[
-        { size: 60, top: "18%", right: "7%", dur: "10s", delay: "-8s" },
-        { size: 110, top: "68%", right: "4%", dur: "14s", delay: "-2s" },
-        { size: 50, top: "78%", left: "18%", dur: "9s", delay: "-6s" },
-      ].map((b, i) => (
+        "w-[60px] h-[60px] top-[18%] right-[7%] [animation-duration:10s] [animation-delay:-8s]",
+        "w-[110px] h-[110px] top-[68%] right-[4%] [animation-duration:14s] [animation-delay:-2s]",
+        "w-[50px] h-[50px] top-[78%] left-[18%] [animation-duration:9s] [animation-delay:-6s]",
+      ].map((bubbleClass, i) => (
         <div
           key={i}
-          className="absolute rounded-full bg-primary/6 border border-primary/12 animate-float-bubble"
-          style={{
-            width: b.size,
-            height: b.size,
-            top: b.top,
-            left: "left" in b ? b.left : undefined,
-            right: "right" in b ? b.right : undefined,
-            animationDuration: b.dur,
-            animationDelay: "delay" in b ? b.delay : "0s",
-          }}
+          className={`absolute rounded-full bg-primary/6 border border-primary/12 animate-float-bubble ${bubbleClass}`}
         />
       ))}
 
@@ -62,7 +53,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Large logo */}
-        <div className="mb-8" style={{ animationDelay: "0.1s" }}>
+        <div className="mb-8 [animation-delay:100ms]">
           <img
             src={onlyLogoImg}
             alt="Qaddam"
@@ -73,27 +64,8 @@ const HeroSection: React.FC = () => {
         {/* Headline */}
         <div className="relative w-full mb-6">
           {/* Glow centered on the headline text only */}
-          <div
-            className="animate-pulse-glow pointer-events-none"
-            style={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "90%",
-              height: "210%",
-              background:
-                "radial-gradient(ellipse, rgba(125, 194, 30, 0.16) 0%, transparent 70%)",
-              zIndex: 0,
-            }}
-          />
-          <h1
-            className="relative z-10 font-tajawal font-black leading-[1.15] animate-fade-down"
-            style={{
-              fontSize: "clamp(2.8rem, 6vw, 5rem)",
-              animationDelay: "0.2s",
-            }}
-          >
+          <div className="animate-pulse-glow pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[210%] z-0 bg-[radial-gradient(ellipse,rgba(125,194,30,0.16)_0%,transparent_70%)]" />
+          <h1 className="relative z-10 font-tajawal font-black leading-[1.15] animate-fade-down text-[clamp(2.8rem,6vw,5rem)] [animation-delay:200ms]">
             {hero.headline1}{" "}
             <span className="text-primary">{hero.headline2}</span>
             <br />
@@ -102,18 +74,12 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p
-          className="text-muted-foreground text-base sm:text-lg leading-[1.8] max-w-[560px] mb-11 animate-fade-down"
-          style={{ animationDelay: "0.35s" }}
-        >
+        <p className="text-muted-foreground text-base sm:text-lg leading-[1.8] max-w-[560px] mb-11 animate-fade-down [animation-delay:350ms]">
           {hero.subtitle}
         </p>
 
         {/* CTA buttons */}
-        <div
-          className="flex gap-5 justify-center flex-wrap mb-16 animate-fade-down"
-          style={{ animationDelay: "0.45s" }}
-        >
+        <div className="flex gap-5 justify-center flex-wrap mb-16 animate-fade-down [animation-delay:450ms]">
           <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
             <Button size="xl" className="gap-3 px-12">
               <AppleIcon />
@@ -130,10 +96,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Stats bar */}
-      <div
-        className="relative z-10 w-full animate-fade-up"
-        style={{ animationDelay: "0.6s" }}
-      >
+      <div className="relative z-10 w-full animate-fade-up [animation-delay:600ms]">
         <Container>
           <div className="flex flex-col sm:flex-row bg-white/4 border border-white/8 rounded-2xl px-6 sm:px-12 py-7 backdrop-blur-[10px] divide-y sm:divide-y-0 sm:divide-x divide-white/8">
             {stats.map((stat, i) => (
