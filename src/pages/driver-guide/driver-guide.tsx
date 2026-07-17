@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PageHeading from "@/components/common/page-heading";
+import FloatingBubbles from "@/components/common/floating-bubbles";
 import Container from "@/components/ui/container";
 import { useRevealAnimation } from "@/hooks/useRevealAnimation";
 import { SECTION_TAG, STAGGER_DELAYS } from "@/constants/css";
@@ -56,6 +57,7 @@ const DriverGuide: React.FC = () => {
                 key={i}
                 className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal ${STAGGER_DELAYS[i % STAGGER_DELAYS.length]}`}
               >
+                <FloatingBubbles />
                 <div
                   className={`flex justify-center ${i % 2 === 1 ? "md:order-2" : ""}`}
                 >
