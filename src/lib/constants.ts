@@ -13,4 +13,5 @@ export const APP_ROUTES = {
   download: "/download",
   privacyPolicy: "/privacy-policy",
   termConditions: "/terms-conditions",
+  driverGuide: "/driver-guide",
 };

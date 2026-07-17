@@ -2,7 +2,6 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import PageHeading from "@/components/common/page-heading";
 import Container from "@/components/ui/container";
-import { HEADING_CLAMP } from "@/constants/css";
 
 const AboutUs: React.FC = () => {
   const { t } = useTranslation();
@@ -20,9 +19,7 @@ const AboutUs: React.FC = () => {
       <section className="py-20 bg-background">
         <Container>
           <div className="max-w-3xl mx-auto flex flex-col items-center gap-8 text-center">
-            <h2
-              className={`font-tajawal font-black text-white leading-[1.2] ${HEADING_CLAMP}`}
-            >
+            <h2 className="heading-page font-tajawal font-black text-white leading-[1.2]">
               {aboutUs.heading}
             </h2>
             <div className="flex flex-col gap-6">
