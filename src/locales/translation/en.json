@@ -4,7 +4,8 @@
       { "label": "Services", "link": "/#services" },
       { "label": "How It Works", "link": "/#how" },
       { "label": "Join as Driver", "link": "/#drivers" },
-      { "label": "Reviews", "link": "/#testimonials" }
+      { "label": "Reviews", "link": "/#testimonials" },
+      { "label": "Driver's Guide", "link": "/driver-guide" }
     ],
     "buttons": {
       "language": { "english": "English", "arabic": "العربية" },
@@ -81,6 +82,48 @@
         "num": "4",
         "title": "Receive & Rate",
         "description": "Receive your order and rate your experience to help us provide even better service next time."
+      }
+    ]
+  },
+  "driverGuide": {
+    "tag": "DRIVER'S GUIDE",
+    "title": "How Delivering Works",
+    "subtitle": "From accepting an order to getting paid — here's every step of a delivery on Qaddam",
+    "steps": [
+      {
+        "num": "1",
+        "title": "Get a New Order",
+        "description": "Go online and instantly receive nearby delivery requests with pickup and drop-off details, distance, and estimated time."
+      },
+      {
+        "num": "2",
+        "title": "Negotiate & Accept",
+        "description": "Chat directly with the customer, agree on a fair price, and accept the offer to lock in the order."
+      },
+      {
+        "num": "3",
+        "title": "Start the Order",
+        "description": "Your booking is confirmed — head straight to the pickup location to collect the shipment."
+      },
+      {
+        "num": "4",
+        "title": "Head to Pickup",
+        "description": "Follow turn-by-turn navigation to reach the customer, then mark your arrival at the pickup point."
+      },
+      {
+        "num": "5",
+        "title": "Confirm Loading",
+        "description": "Take a photo confirming the shipment is loaded and secure, then start the delivery."
+      },
+      {
+        "num": "6",
+        "title": "Confirm Delivery",
+        "description": "Once you've delivered the shipment, upload a photo as proof and mark the order as delivered."
+      },
+      {
+        "num": "7",
+        "title": "Rate & Get Paid",
+        "description": "Rate your experience with the customer, collect your payment, and you're ready for the next order."
       }
     ]
   },

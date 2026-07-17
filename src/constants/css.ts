@@ -10,8 +10,6 @@ export const TESTIMONIAL_CARD =
 export const SECTION_TAG =
   "inline-block bg-primary/12 border border-primary/25 text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4";
 
-export const HEADING_CLAMP = "text-[clamp(1.8rem,4vw,2.8rem)]";
-
 // Tailwind picks up these classes because they're literal strings in this
 // file; index into this array (with % length) for staggered reveal delays.
 export const STAGGER_DELAYS = [
