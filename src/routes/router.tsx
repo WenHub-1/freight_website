@@ -24,6 +24,9 @@ const TermsConditions = lazy(
 const BecomeADriver = lazy(
   () => import("../pages/become-a-driver/become-a-driver.tsx"),
 );
+const DriverGuide = lazy(
+  () => import("../pages/driver-guide/driver-guide.tsx"),
+);
 
 const appRoutes = createBrowserRouter([
   {
@@ -78,6 +81,10 @@ const appRoutes = createBrowserRouter([
       {
         path: APP_ROUTES.download,
         element: <Download />,
+      },
+      {
+        path: APP_ROUTES.driverGuide,
+        element: <DriverGuide />,
       },
     ],
   },

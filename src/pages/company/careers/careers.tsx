@@ -5,7 +5,6 @@ import Container from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { APP_ROUTES } from "@/lib";
 import { useNavigate } from "react-router-dom";
-import { HEADING_CLAMP } from "@/constants/css";
 
 const Careers: React.FC = () => {
   const { t } = useTranslation();
@@ -24,9 +23,7 @@ const Careers: React.FC = () => {
       <section className="py-20 bg-background">
         <Container>
           <div className="max-w-2xl mx-auto flex flex-col items-center gap-8 text-center">
-            <h2
-              className={`font-tajawal font-black text-white leading-[1.2] ${HEADING_CLAMP}`}
-            >
+            <h2 className="heading-page font-tajawal font-black text-white leading-[1.2]">
               {careers.heading}
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed">
