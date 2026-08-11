@@ -52,28 +52,41 @@ const Download: React.FC = () => {
 
               {/* Store Buttons */}
               <div className="flex flex-col items-center gap-4">
-                <a
-                  href={PLAY_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={GooglePlay}
-                    alt={t("cta.googlePlay")}
-                    className="h-14 object-contain hover:opacity-80 transition-opacity"
-                  />
-                </a>
-                <a
-                  href={APP_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={AppStore}
-                    alt={t("cta.appStore")}
-                    className="h-14 object-contain hover:opacity-80 transition-opacity"
-                  />
-                </a>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-muted-foreground text-sm font-medium">
+                    For Android Phones
+                  </span>
+
+                  <a
+                    href={PLAY_STORE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={GooglePlay}
+                      alt={t("cta.googlePlay")}
+                      className="h-14 object-contain hover:opacity-80 transition-opacity"
+                    />
+                  </a>
+                </div>
+
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-muted-foreground text-sm font-medium">
+                    For Apple Phones
+                  </span>
+
+                  <a
+                    href={APP_STORE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={AppStore}
+                      alt={t("cta.appStore")}
+                      className="h-14 object-contain hover:opacity-80 transition-opacity"
+                    />
+                  </a>
+                </div>
 
                 {/* QR Code — mobile only */}
                 <div className="flex md:hidden flex-col items-center gap-3 mt-4">
