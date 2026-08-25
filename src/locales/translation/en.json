@@ -177,9 +177,7 @@
   "downloadPage": {
     "pageTitle": "Download App",
     "heading": "Download the Qaddam App",
-    "subtitle": "Scan the QR code or tap a button below to download the app on your device.",
-    "scanPrompt": "Scan with your phone camera",
-    "or": "OR"
+    "subtitle": "Tap a button below to download the app on your device."
   },
   "cta": {
     "tag": "Download the App",
