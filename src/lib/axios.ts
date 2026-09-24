@@ -9,6 +9,14 @@ export const axios = Axios.create({
   baseURL: API_URL,
 });
 
+// The response interceptor below unwraps `response.data`, so a call through
+// this instance actually resolves to `ApiResponse<T>`, not `AxiosResponse`.
+export interface ApiResponse<T> {
+  success: boolean;
+  message: string;
+  data: T;
+}
+
 const authRequestInterceptor = (config: InternalAxiosRequestConfig) => {
   const token = localStorage.getItem("jwtToken");
 

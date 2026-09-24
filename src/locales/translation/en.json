@@ -179,6 +179,78 @@
     "heading": "Download the Qaddam App",
     "subtitle": "Tap a button below to download the app on your device."
   },
+  "deleteAccountPage": {
+    "pageTitle": "Delete Account",
+    "heading": "Delete Your Qaddam Account",
+    "subtitle": "You can request account deletion here even without the app — verify your phone number and we'll take it from there.",
+    "policy": {
+      "title": "What happens when you request deletion",
+      "steps": [
+        "Verify your phone number with a one-time code to file the request.",
+        "An admin reviews the request before anything happens to your account.",
+        "If approved, your account is deactivated during a short cancellation window.",
+        "Once the window closes, your data is permanently erased."
+      ],
+      "windowNote": "Signing back in during the {{days}}-day window cancels the deletion and restores your account.",
+      "deletedTitle": "Data that gets deleted",
+      "retainedTitle": "Data we're required to keep",
+      "thirdPartyNote": "Not controlled by Qaddam",
+      "loading": "Loading policy details..."
+    },
+    "form": {
+      "phone": {
+        "label": "Phone number",
+        "placeholder": "+966501234567",
+        "helper": "This must be the phone number on your Qaddam account. We'll text you a 6-digit code to verify it's you.",
+        "invalid": "Enter a valid Saudi phone number, e.g. +966501234567",
+        "submit": "Send verification code"
+      },
+      "otp": {
+        "title": "Enter verification code",
+        "description": "We sent a 6-digit code by SMS to {{phone}}.",
+        "label": "Verification code",
+        "invalid": "Enter the 6-digit code",
+        "reasonLabel": "Reason (optional)",
+        "reasonPlaceholder": "Tell us why you're leaving",
+        "resend": "Resend code",
+        "back": "Change phone number",
+        "submit": "Submit deletion request"
+      },
+      "success": {
+        "title": "Request received",
+        "description": "Your account deletion request has been submitted and is now pending admin review.",
+        "referenceLabel": "Your reference number",
+        "note": "Keep this reference for your records. If your request is approved, your account will be deactivated, then permanently deleted after the cancellation window ends.",
+        "backHome": "Return to homepage"
+      }
+    },
+    "tabs": {
+      "request": "Request Deletion",
+      "check": "Check / Cancel a Request"
+    },
+    "check": {
+      "description": "Already submitted a request? Enter your reference number and the phone number you verified with to check its status or cancel it.",
+      "referenceLabel": "Reference number",
+      "referencePlaceholder": "QD-DEL-XXXXXXXX",
+      "referenceInvalid": "Enter the reference number from your confirmation",
+      "phoneLabel": "Phone number",
+      "submit": "Check status",
+      "statusLabel": "Status",
+      "requestedAtLabel": "Requested on",
+      "scheduledLabel": "Scheduled deletion date",
+      "reviewNoteLabel": "Note from the review",
+      "cancelSubmit": "Cancel this deletion request",
+      "cancelConfirm": "Cancel this deletion request? Your account will stay active and nothing will be deleted.",
+      "cancelledNotice": "This request has been cancelled. Your account is safe.",
+      "statuses": {
+        "pending": "Pending review",
+        "approved": "Approved — scheduled for deletion",
+        "rejected": "Rejected",
+        "cancelled": "Cancelled",
+        "completed": "Completed — data erased"
+      }
+    }
+  },
   "cta": {
     "tag": "Download the App",
     "title": "Ready to Start with Qaddam?",
@@ -210,7 +282,8 @@
       "items": [
         { "label": "Contact Us", "link": "/contact-us" },
         { "label": "Privacy Policy", "link": "/privacy-policy" },
-        { "label": "Terms & Conditions", "link": "/terms-conditions" }
+        { "label": "Terms & Conditions", "link": "/terms-conditions" },
+        { "label": "Delete Account", "link": "/delete-account" }
       ]
     },
     "copyright": "© 2025 Qaddam. All rights reserved."
