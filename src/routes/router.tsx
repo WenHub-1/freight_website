@@ -14,6 +14,9 @@ const ContactUs = lazy(
 const AboutUs = lazy(() => import("../pages/company/about-us/about-us.tsx"));
 const Careers = lazy(() => import("../pages/company/careers/careers.tsx"));
 const Download = lazy(() => import("../pages/download"));
+const DeleteAccount = lazy(
+  () => import("../pages/delete-account/delete-account.tsx"),
+);
 const PrivacyPolicy = lazy(
   () => import("@/pages/privacy-policy/privacy-policy.tsx"),
 );
@@ -81,6 +84,10 @@ const appRoutes = createBrowserRouter([
       {
         path: APP_ROUTES.download,
         element: <Download />,
+      },
+      {
+        path: APP_ROUTES.deleteAccount,
+        element: <DeleteAccount />,
       },
       {
         path: APP_ROUTES.driverGuide,
